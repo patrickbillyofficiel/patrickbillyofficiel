@@ -41,11 +41,20 @@
         </ul>
       </nav>
 
-      <div class="lang-switch" aria-label="Choix de la langue">
-        <button type="button" data-lang="fr" class="is-active">FR</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="mg">MG</button>
-      </div>
+      <!-- ONGLET LANGUES -->
+<div class="ia-tabs">
+  <button class="ia-tab is-active" data-target="ia-fr">FR</button>
+  <button class="ia-tab" data-target="ia-en">EN</button>
+  <button class="ia-tab" data-target="ia-mg">MG</button>
+</div>
+
+     <!-- BOUTON VOIX -->
+<div class="ia-voice">
+  <button id="speak-btn" class="btn btn-ghost" type="button">
+    Lire le résumé à haute voix
+  </button>
+  <p id="voice-note" class="note" aria-live="polite"></p>
+</div>
     </div>
   </header>
 
