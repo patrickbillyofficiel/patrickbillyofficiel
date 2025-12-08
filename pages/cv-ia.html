@@ -12,6 +12,12 @@
 </head>
 
 <body>
+  <!-- MINI-PLAYER FLOTTANT -->
+  <div class="voice-player" hidden>
+    <button id="vp-pause">⏯ Pause</button>
+    <button id="vp-stop">⏹ Stop</button>
+  </div>
+
   <a href="#main" class="skiplink">Aller au contenu principal</a>
 
   <!-- HEADER -->
@@ -40,13 +46,6 @@
         <button type="button" data-lang="en">EN</button>
         <button type="button" data-lang="mg">MG</button>
       </div>
-
-      <div class="voice-controls">
-        <button id="voice-read-btn" class="btn btn-ghost">🔊 Lire</button>
-        <button id="voice-stop-btn" class="btn btn-ghost">⏹ Stop</button>
-        <button id="voice-dictate-btn" class="btn btn-primary">🎤 Dicter une offre</button>
-     </div>
-
     </div>
   </header>
 
@@ -129,11 +128,11 @@
           <!-- COLONNE OFFRE -->
           <article class="card">
             <h3>1. Collez votre offre</h3>
-            <div class="textarea-wrapper">
-            <textarea id="job-offer" rows="10" placeholder="Collez ici l’offre…"></textarea>
-            <button id="micro-btn" class="micro-btn" aria-label="Dicter l’offre">🎤</button>
-            </div>
 
+            <div class="textarea-wrapper">
+              <textarea id="job-offer" rows="10" placeholder="Collez ici l’offre…"></textarea>
+              <button id="micro-btn" class="micro-btn" aria-label="Dicter l’offre">🎤</button>
+            </div>
 
             <button id="analyze-btn" class="btn btn-primary" style="margin-top:1rem;">
               Analyser l’offre avec l’IA
@@ -142,7 +141,7 @@
             <div id="ia-loader" class="ia-loader" hidden></div>
 
             <p id="analysis-note" class="note" hidden>
-              Analyse IA simulée côté navigateur — FR / EN / MG disponibles en onglets.
+              Analyse IA simulée — restitution FR · EN · MG par onglets.
             </p>
           </article>
 
@@ -155,6 +154,13 @@
               <button class="ia-tab is-active" data-target="ia-fr">FR</button>
               <button class="ia-tab" data-target="ia-en">EN</button>
               <button class="ia-tab" data-target="ia-mg">MG</button>
+            </div>
+
+            <!-- BOUTONS AUDIO -->
+            <div class="voice-controls">
+              <button id="voice-read-btn" class="btn btn-ghost">🔊 Lire</button>
+              <button id="voice-stop-btn" class="btn btn-ghost">⏹ Stop</button>
+              <button id="voice-dictate-btn" class="btn btn-primary">🎤 Dicter</button>
             </div>
 
             <!-- FR -->
@@ -224,7 +230,7 @@
 
   <script src="../assets/js/lang-switch.js"></script>
   <script src="../assets/js/cv-ia.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="../assets/js/voice-module.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
