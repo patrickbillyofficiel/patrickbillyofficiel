@@ -1,74 +1,226 @@
-// ONGLET LANGUES
-document.querySelectorAll(".ia-tab").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".ia-tab").forEach(b => b.classList.remove("is-active"));
-    btn.classList.add("is-active");
+// cv-ia.js
+(function () {
+  const analyzeBtn = document.getElementById('analyze-btn');
+  const jobOfferTextarea = document.getElementById('job-offer');
+  const loader = document.getElementById('ia-loader');
+  const note = document.getElementById('analysis-note');
 
-    document.querySelectorAll(".ia-panel").forEach(p => p.hidden = true);
-    document.getElementById(btn.dataset.target).hidden = false;
+  const summaryFR = document.querySelector('.summary-list-fr');
+  const summaryEN = document.querySelector('.summary-list-en');
+  const summaryMG = document.querySelector('.summary-list-mg');
+
+  const tableFR = document.querySelector('.table-body-fr');
+  const tableEN = document.querySelector('.table-body-en');
+  const tableMG = document.querySelector('.table-body-mg');
+
+  const tabs = document.querySelectorAll('.ia-tab');
+  const panels = document.querySelectorAll('.ia-panel');
+
+  // --- GESTION ONGLET FR / EN / MG ---
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+
+      tabs.forEach(t => t.classList.remove('is-active'));
+      tab.classList.add('is-active');
+
+      panels.forEach(p => {
+        if (p.id === targetId) {
+          p.hidden = false;
+        } else {
+          p.hidden = true;
+        }
+      });
+    });
   });
-});
 
-// BOUTON ANALYSE
-const analyzeBtn = document.getElementById("analyze-btn");
-const loader = document.getElementById("ia-loader");
-const note = document.getElementById("analysis-note");
-const textarea = document.getElementById("job-offer");
+  // --- FONCTION "ANALYSE" SIMULÉE ---
+  function simulateAnalysis(text) {
+    const trimmed = (text || '').trim();
+    const isEmpty = trimmed.length === 0;
 
-analyzeBtn.addEventListener("click", () => {
-  const text = textarea.value.trim();
-  if (!text) return alert("Veuillez coller une offre.");
+    // Petit résumé simple selon qu'il y a du texte ou pas
+    const frSummary = isEmpty
+      ? [
+          "Aucune offre collée : exemple générique affiché.",
+          "Match fort sur : accessibilité, RGAA, terrain handicap, low-tech.",
+          "Plus-value : IA appliquée, pédagogie, dimension France / Madagascar."
+        ]
+      : [
+          "Offre analysée : profil très proche des besoins exprimés.",
+          "Match fort sur : accessibilité, accompagnement, outils low-tech.",
+          "Plus-value : IA appliquée, travail avec publics fragiles, formats offline."
+        ];
 
-  loader.hidden = false;
-  note.hidden = true;
+    const enSummary = isEmpty
+      ? [
+          "No job offer pasted: showing a generic example.",
+          "Strong match on: accessibility, RGAA/WCAG, low-tech tools.",
+          "Extra value: applied AI, pedagogy, France/Madagascar experience."
+        ]
+      : [
+          "Job offer analysed: profile strongly aligned with stated needs.",
+          "Strong match on: accessibility, support, low-tech/offline tools.",
+          "Extra value: applied AI, vulnerable users, real field experience."
+        ];
 
-  setTimeout(() => {
-    loader.hidden = true;
-    note.hidden = false;
+    const mgSummary = isEmpty
+      ? [
+          "Tsy mbola nisy tolotra asa nalefa: ohatra ankapobeny aloha.",
+          "Mifanaraka tsara amin'ny: fidirana nomerika, RGAA, fitaovana low-tech.",
+          "Fanampiny: IA ampiharina, pédagogie, traikefa Frantsa/Madagasikara."
+        ]
+      : [
+          "Efa nodinihina ny tolotra: tena akaiky ny mombamomba.",
+          "Mifanaraka amin'ny: fidirana, fanohanana, fitaovana offline.",
+          "Fanampiny: IA ampiharina, olona marefo, traikefa eny ifotony."
+        ];
 
-    analyzeFR(text);
-    analyzeEN(text);
-    analyzeMG(text);
+    // Remplir les listes
+    function fillList(ul, items) {
+      if (!ul) return;
+      ul.innerHTML = '';
+      items.forEach(txt => {
+        const li = document.createElement('li');
+        li.textContent = txt;
+        ul.appendChild(li);
+      });
+    }
 
-    document.querySelector(".ia-panel").scrollIntoView({ behavior: "smooth" });
-  }, 1000);
-});
+    fillList(summaryFR, frSummary);
+    fillList(summaryEN, enSummary);
+    fillList(summaryMG, mgSummary);
 
-// ANALYSE FR
-function analyzeFR(t) {
-  document.querySelector(".summary-list-fr").innerHTML = `
-    <li><strong>Match :</strong> accessibilité, RGAA, handicap.</li>
-    <li><strong>Plus-value :</strong> IA appliquée, low-tech, pédagogie.</li>
-    <li><strong>À préciser :</strong> rythme, autonomie, périmètre exact.</li>`;
+    // Tableaux très simples
+    function fillTable(tbody, rows) {
+      if (!tbody) return;
+      tbody.innerHTML = '';
+      rows.forEach(r => {
+        const tr = document.createElement('tr');
+        r.forEach(cell => {
+          const td = document.createElement('td');
+          td.textContent = cell;
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+    }
 
-  document.querySelector(".table-body-fr").innerHTML = `
-    <tr><td>Audit</td><td>Audit RGAA complet + Accessibilité++</td><td>Compétence maîtrisée</td></tr>
-    <tr><td>Handicap</td><td>Expérience terrain</td><td>Différenciant</td></tr>
-    <tr><td>IA</td><td>Assistants IA métiers</td><td>Structurant pour l'entreprise</td></tr>`;
-}
+    const baseRowsFR = [
+      [
+        "Accessibilité numérique (RGAA / WCAG)",
+        "Audit + Accessibilité++ (voix, IA, terrain)",
+        "Compétence couverte, au-delà du minimum légal."
+      ],
+      [
+        "Accompagnement d'équipes",
+        "Formations courtes, supports simples, Mini-WTD",
+        "Facilite l'appropriation, pas seulement la conformité."
+      ]
+    ];
 
-// ANALYSE EN
-function analyzeEN(t) {
-  document.querySelector(".summary-list-en").innerHTML = `
-    <li><strong>Strong match:</strong> accessibility, RGAA, disability field.</li>
-    <li><strong>Added value:</strong> applied AI, low-tech, training.</li>
-    <li><strong>To clarify:</strong> scope, autonomy, workload.</li>`;
+    const baseRowsEN = [
+      [
+        "Digital accessibility (RGAA / WCAG)",
+        "Audits + Accessibilité++ (voice, AI, field)",
+        "Skill covered, beyond legal minimum."
+      ],
+      [
+        "Team support",
+        "Short trainings, simple materials, Mini-WTD",
+        "Helps ownership, not only compliance."
+      ]
+    ];
 
-  document.querySelector(".table-body-en").innerHTML = `
-    <tr><td>Accessibility</td><td>Complete RGAA audit + Accessibility++</td><td>High-level mastery</td></tr>
-    <tr><td>Disability</td><td>Real field experience</td><td>Strong differentiator</td></tr>
-    <tr><td>AI</td><td>Custom AI assistants</td><td>Useful for internal adoption</td></tr>`;
-}
+    const baseRowsMG = [
+      [
+        "Fidirana nomerika (RGAA / WCAG)",
+        "Fanombanana + Accessibilité++ (feon'aina, IA, zava-misy)",
+        "Fahaizana ampy, mihoatra ny fepetra ofisialy."
+      ],
+      [
+        "Fanohanana ekipa",
+        "Fampiofanana fohy, fitaovana tsotra, Mini-WTD",
+        "Manamora ny fandraisan'andraikitra, tsy hoe taratasy fotsiny."
+      ]
+    ];
 
-// ANALYSE MG
-function analyzeMG(t) {
-  document.querySelector(".summary-list-mg").innerHTML = `
-    <li><strong>Mifanaraka tsara:</strong> fidirana nomerika, RGAA, fahasembanana.</li>
-    <li><strong>Tombony:</strong> IA ampiharina, low-tech, fampiofanana.</li>
-    <li><strong>Hodinihina:</strong> andraikitra, fahaleovan-tena, isan'andro.</li>`;
+    fillTable(tableFR, baseRowsFR);
+    fillTable(tableEN, baseRowsEN);
+    fillTable(tableMG, baseRowsMG);
+  }
 
-  document.querySelector(".table-body-mg").innerHTML = `
-    <tr><td>Fidirana</td><td>AUDIT RGAA + Accessibility++</td><td>Fahaizana avo</td></tr>
-    <tr><td>Fahasembanana</td><td>Traikefa eny ifotony</td><td>Mahasarika</td></tr>
-    <tr><td>IA</td><td>Assistant IA manokana</td><td>Maika ho an'ny orinasa</td></tr>`;
-}
+  if (analyzeBtn) {
+    analyzeBtn.addEventListener('click', () => {
+      if (loader) loader.hidden = false;
+      if (note) note.hidden = true;
+
+      window.setTimeout(() => {
+        simulateAnalysis(jobOfferTextarea ? jobOfferTextarea.value : '');
+        if (loader) loader.hidden = true;
+        if (note) note.hidden = false;
+      }, 600);
+    });
+  }
+
+  // --- MODULE VOIX SIMPLE (lecture du résumé de l’onglet actif) ---
+  const speakBtn = document.getElementById('speak-btn');
+  const voiceNote = document.getElementById('voice-note');
+
+  function getActiveSummaryText() {
+    const activeTab = document.querySelector('.ia-tab.is-active');
+    if (!activeTab) return '';
+
+    const target = activeTab.getAttribute('data-target');
+    let list = null;
+
+    if (target === 'ia-fr') list = summaryFR;
+    if (target === 'ia-en') list = summaryEN;
+    if (target === 'ia-mg') list = summaryMG;
+
+    if (!list) return '';
+
+    return Array.from(list.querySelectorAll('li'))
+      .map(li => li.textContent.trim())
+      .join('. ');
+  }
+
+  if (speakBtn) {
+    speakBtn.addEventListener('click', () => {
+      if (!('speechSynthesis' in window)) {
+        if (voiceNote) {
+          voiceNote.textContent = "La synthèse vocale n’est pas supportée par ce navigateur.";
+        }
+        return;
+      }
+
+      const text = getActiveSummaryText();
+      if (!text) {
+        if (voiceNote) {
+          voiceNote.textContent = "Rien à lire pour le moment. Lancez d’abord une analyse.";
+        }
+        return;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(text);
+
+      const activeTab = document.querySelector('.ia-tab.is-active');
+      const target = activeTab ? activeTab.getAttribute('data-target') : 'ia-fr';
+
+      if (target === 'ia-en') utterance.lang = 'en-GB';
+      else if (target === 'ia-mg') utterance.lang = 'fr-FR'; // pas de voix MG dédiée, on lit en FR
+      else utterance.lang = 'fr-FR';
+
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
+
+      if (voiceNote) {
+        voiceNote.textContent = "Lecture en cours…";
+      }
+
+      utterance.onend = () => {
+        if (voiceNote) voiceNote.textContent = "Lecture terminée.";
+      };
+    });
+  }
+})();
