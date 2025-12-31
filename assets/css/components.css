@@ -457,3 +457,10 @@
     gap:10px;
   }
 }
+
+.lang-switch {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
