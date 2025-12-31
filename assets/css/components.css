@@ -344,3 +344,25 @@
 .voice-player button:hover {
   background: #475569;
 }
+
+/* === Header avec photo === */
+.site-brand.with-photo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2f4ea2;        /* bleu nuit */
+  box-shadow: 0 0 0 5px rgba(47,78,162,0.25);
+  background: #0b1220;
+}
+
+.site-text {
+  display: flex;
+  flex-direction: column;
+}
