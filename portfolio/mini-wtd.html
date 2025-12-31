@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Projet · Mini-WTD · Portfolio Patrick Billy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projet Mini-WTD : module de simulation de poste, analyse des contraintes et pistes d’aménagement, utilisable offline.">
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+
+<body>
+  <a href="#main" class="skiplink">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="../index.html">Patrick Billy — Portfolio</a>
+        <small>Projet : Mini-WTD</small>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a class="is-active" href="../projets.html">Projets</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../a-propos.html">À propos</a></li>
+          <li><a class="btn btn-primary" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1>Mini-WTD</h1>
+      <div class="meta">
+        <span class="badge">Low-tech</span>
+        <span class="badge">Offline</span>
+        <span class="badge">Inclusion</span>
+      </div>
+
+      <hr class="hr">
+
+      <section class="card">
+        <div class="card-inner">
+          <h2 class="h3">Contexte</h2>
+          <p class="muted">
+            Décrire une situation de travail “réelle” et produire des pistes d’aménagement sans
+            perdre les personnes dans des formulaires interminables.
+          </p>
+        </div>
+      </section>
+
+      <div class="grid grid-2" style="margin-top:24px;">
+        <section class="card">
+          <div class="card-inner">
+            <h2 class="h3">Objectifs</h2>
+            <ul>
+              <li>Décrire tâches et contraintes (motrices, cognitives, sensorielles).</li>
+              <li>Proposer des pistes réalistes d’adaptation.</li>
+              <li>Fonctionner sans réseau (clé USB / intranet).</li>
+              <li>Interface simple, accessible, utilisable par des profils variés.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-inner">
+            <h2 class="h3">Ce que j’ai fait</h2>
+            <ol>
+              <li>Structure des écrans + parcours minimal.</li>
+              <li>Rédaction micro-textes (clarifier, rassurer, guider).</li>
+              <li>Prototype offline (HTML/CSS/JS) + packaging.</li>
+              <li>Contrôles accessibilité : clavier, focus, sémantique.</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+
+      <section class="card" style="margin-top:24px;">
+        <div class="card-inner">
+          <h2 class="h3">Résultats</h2>
+          <ul>
+            <li>Compréhension plus rapide de la situation de travail.</li>
+            <li>Moins d’allers-retours pour “traduire” le besoin.</li>
+            <li>Support plus clair pour décider d’aménagements concrets.</li>
+          </ul>
+          <p class="note small">Quand l’outil est simple, les gens parlent enfin du vrai problème.</p>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:24px;">
+        <div class="card-inner">
+          <h2 class="h3">Accessibilité &amp; robustesse</h2>
+          <ul>
+            <li>Clavier : parcours complet + focus visible.</li>
+            <li>HTML sémantique : titres, listes, libellés.</li>
+            <li>Offline : aucune dépendance réseau.</li>
+            <li>Maintenance : structure claire, doc courte.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="actions" style="margin-top:24px;">
+        <a class="btn btn-outline" href="../projets.html">← Retour projets</a>
+        <a class="btn btn-primary" href="../contact.html">Me contacter</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Patrick Billy — Portfolio.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
