@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Services · Portfolio Patrick Billy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Services : audit accessibilité RGAA/WCAG, design inclusif, modules offline/low-tech, IA appliquée, accompagnement et formation.">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+
+<body>
+  <a href="#main" class="skiplink">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html">Patrick Billy — Portfolio</a>
+        <small>Services (clairs, livrables concrets)</small>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a aria-current="page" href="services.html">Services</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a class="btn btn-primary" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1>Services</h1>
+      <p class="muted">Tu payes pour un résultat : compréhension, accessibilité, robustesse. Pas pour un “effet waouh”.</p>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="card-inner">
+            <h2 class="h3">Audit accessibilité (RGAA / WCAG)</h2>
+            <ul>
+              <li>Audit ciblé ou complet (selon taille et risques)</li>
+              <li>Preuves + recommandations actionnables</li>
+              <li>Backlog priorisé (bloquants → majeurs → mineurs)</li>
+              <li>Re-tests après correction</li>
+            </ul>
+            <p class="note small">Livrable attendu : un plan de correction exploitable. Pas un document qui dort.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-inner">
+            <h2 class="h3">Accompagnement correction</h2>
+            <ul>
+              <li>Revues code &amp; UI</li>
+              <li>Support dev / produit</li>
+              <li>Check-lists et patterns accessibles</li>
+              <li>Montée en compétence de l’équipe</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-inner">
+            <h2 class="h3">Design inclusif &amp; UX simple</h2>
+            <ul>
+              <li>Parcours clairs, micro-textes utiles</li>
+              <li>Erreurs compréhensibles</li>
+              <li>Interfaces “low-noise”</li>
+              <li>Tests rapides avec des usages réels</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-inner">
+            <h2 class="h3">Modules low-tech / offline</h2>
+            <ul>
+              <li>Outils autonomes (USB / intranet)</li>
+              <li>Robustesse, performance, compatibilité</li>
+              <li>Documentation simple + transmission</li>
+              <li>Procédure d’installation &amp; maintenance</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-inner">
+            <h2 class="h3">IA appliquée (assistants utiles)</h2>
+            <ul>
+              <li>Guidance pas à pas (RH, formation, publics fragiles)</li>
+              <li>Reformulation, explication, simplification</li>
+              <li>Garde-fous : limites, transparence, confidentialité</li>
+              <li>Scénarios &amp; prompts adaptés</li>
+            </ul>
+            <p class="note small">Règle : l’IA doit réduire la charge mentale, pas en créer.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-inner">
+            <h2 class="h3">Formation &amp; sensibilisation</h2>
+            <ul>
+              <li>Ateliers courts et pratico-pratiques</li>
+              <li>Cas réels de ton équipe</li>
+              <li>Kit de démarrage (check-lists + exemples)</li>
+              <li>Mesure des progrès (avant / après)</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <hr class="hr">
+
+      <section class="callout" aria-labelledby="process">
+        <h2 id="process">Comment on travaille</h2>
+        <ol>
+          <li><strong>Cadrage</strong> (30–60 min) : contexte, public, contraintes, objectif.</li>
+          <li><strong>Diagnostic</strong> : repérage des blocages, quick wins, risques.</li>
+          <li><strong>Plan</strong> : priorités + livrables + points de contrôle.</li>
+          <li><strong>Livraison</strong> : corrections / module / doc.</li>
+          <li><strong>Re-tests</strong> : validation et ajustements.</li>
+        </ol>
+        <div class="actions">
+          <a class="btn btn-primary" href="contact.html">Me contacter</a>
+          <a class="btn btn-outline" href="projets.html">Voir des exemples</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Patrick Billy — Portfolio.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Contact · Portfolio Patrick Billy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact : email, LinkedIn, informations utiles pour cadrer une mission accessibilité, inclusion, IA appliquée, low-tech/offline.">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+
+<body>
+  <a href="#main" class="skiplink">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html">Patrick Billy — Portfolio</a>
+        <small>Contact</small>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a aria-current="page" class="btn btn-primary" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1>Contact</h1>
+      <p class="muted">Pour aller vite : dis-moi ton public, tes contraintes, et ce que tu veux améliorer.</p>
+
+      <div class="grid grid-2">
+        <section class="card">
+          <div class="card-inner">
+            <h2 class="h3">Coordonnées</h2>
+            <ul>
+              <li>Email : <a href="mailto:elanpourtous49@gmail.com">elanpourtous49@gmail.com</a></li>
+              <li>LinkedIn : <a href="https://www.linkedin.com/in/patrickbilly" target="_blank" rel="noreferrer">/in/patrickbilly</a></li>
+            </ul>
+            <p class="note small">Je réponds mieux aux demandes qui décrivent le contexte. Sinon, je devine… et je déteste deviner.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-inner">
+            <h2 class="h3">Pour cadrer ta demande</h2>
+            <ul>
+              <li><strong>Public</strong> (qui utilise ?)</li>
+              <li><strong>Contexte</strong> (terrain / bureau / formation / RH…)</li>
+              <li><strong>Contraintes</strong> (offline, matériel, délai, accessibilité…)</li>
+              <li><strong>Objectif</strong> (réduire erreurs, rendre accessible, simplifier…)</li>
+              <li><strong>Deadline</strong> (si tu en as une)</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <hr class="hr">
+
+      <section class="callout">
+        <h2>Message type (copier-coller)</h2>
+        <p class="muted">
+          Bonjour Patrick, je cherche [audit/corrections/module offline/assistant IA] pour [contexte].
+          Public : […]. Contraintes : […]. Deadline : […]. Liens / accès : […].
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:elanpourtous49@gmail.com?subject=Demande%20-%20Portfolio%20Patrick%20Billy">Envoyer un email</a>
+          <a class="btn btn-outline" href="projets.html">Voir des exemples</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Patrick Billy — Portfolio.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

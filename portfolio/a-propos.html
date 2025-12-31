@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>À propos · Portfolio Patrick Billy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="À propos : parcours, méthode, valeurs. Accessibilité, inclusion, IA appliquée, low-tech/offline.">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+
+<body>
+  <a href="#main" class="skiplink">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html">Patrick Billy — Portfolio</a>
+        <small>Le terrain d’abord, le reste ensuite</small>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a aria-current="page" href="a-propos.html">À propos</a></li>
+          <li><a class="btn btn-primary" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1>À propos</h1>
+
+      <div class="grid grid-2">
+        <section class="card">
+          <div class="card-inner">
+            <h2 class="h3">Mon angle</h2>
+            <p class="muted">
+              Je conçois des outils numériques utilisables par des humains, y compris quand
+              ils sont fatigués, stressés, en situation de handicap, ou avec peu de moyens.
+            </p>
+            <p class="muted">
+              Je préfère une interface claire et robuste à une interface “jolie mais fragile”.
+              Et oui : parfois, la meilleure innovation, c’est d’enlever des trucs.
+            </p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-inner">
+            <h2 class="h3">Ce que je refuse</h2>
+            <ul>
+              <li>Les effets et buzzwords qui masquent les problèmes.</li>
+              <li>La complexité “pour faire sérieux”.</li>
+              <li>Les livrables inutilisables (slides sans plan d’action).</li>
+              <li>Les décisions hors-sol (“personne n’utilise ça comme ça”).</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <hr class="hr">
+
+      <section class="card">
+        <div class="card-inner">
+          <h2 class="h3">Repères (mini timeline)</h2>
+          <ul>
+            <li><strong>Graphisme &amp; formation</strong> → comprendre l’attention, la lisibilité, la transmission.</li>
+            <li><strong>Terrain &amp; contraintes</strong> → faire simple, robuste, utile.</li>
+            <li><strong>Accessibilité</strong> → RGAA/WCAG, tests, corrections, accompagnement.</li>
+            <li><strong>Low-tech/offline</strong> → outils USB/intranet, contextes à faible infra.</li>
+            <li><strong>IA appliquée</strong> → assistants pédagogiques avec garde-fous.</li>
+          </ul>
+          <p class="note small">Mon test : si une personne en difficulté réussit, tout le monde réussit.</p>
+        </div>
+      </section>
+
+      <div class="actions" style="margin-top:24px;">
+        <a class="btn btn-primary" href="contact.html">Me contacter</a>
+        <a class="btn btn-outline" href="../index.html">Retour au site officiel</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Patrick Billy — Portfolio.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
