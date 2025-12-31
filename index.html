@@ -1,160 +1,559 @@
-@'
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Serveur Work-Test — Accueil</title>
+  <meta charset="utf-8">
+  <title>Patrick Billy · Accessibilité, Inclusion &amp; IA appliquée</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Site officiel de Patrick Billy : consultant en accessibilité numérique, design inclusif, IA appliquée et solutions low-tech/offline. Créateur de Mini-WTD.">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- Icons / PWA -->
+  <link rel="icon" href="assets/img/pb.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/img/pb-128.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0B1220">
+
+
   <style>
-    :root{
-      --bg:#0e0f14; --card:#141622; --txt:#e9ecf1; --muted:#a9b2c3;
-      --line:rgba(255,255,255,.10); --a:#6ee7ff; --ok:#8ef7a3; --ko:#ffb4b4;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--txt)}
-    a{color:var(--a);text-decoration:none}
-    .wrap{max-width:1050px;margin:auto;padding:22px}
-    .hero{
-      border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border-radius:22px;padding:18px
-    }
-    .top{display:flex;gap:14px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
-    h1{margin:0;font-size:22px}
-    .subtitle{margin:6px 0 0;color:var(--muted);line-height:1.4}
-    .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(0,0,0,.22)}
-    .dot{width:10px;height:10px;border-radius:50%}
-    .dot.ok{background:var(--ok)} .dot.ko{background:var(--ko)}
-    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
-    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-    .card{border:1px solid var(--line);background:var(--card);border-radius:18px;padding:16px}
-    .card h2{margin:0 0 8px;font-size:16px}
-    .card p{margin:8px 0;color:var(--muted);line-height:1.4}
-    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      border:1px solid var(--line);background:rgba(255,255,255,.06);
-      padding:10px 12px;border-radius:14px;font-weight:700;color:var(--txt)
-    }
-    .btn:hover{background:rgba(255,255,255,.10)}
-    .mini{font-size:12px;color:var(--muted)}
-    pre{margin:10px 0 0;background:rgba(0,0,0,.25);border:1px solid var(--line);
-        padding:10px;border-radius:14px;overflow:auto;font-family:ui-monospace,Consolas,monospace}
-    footer{margin-top:16px;color:var(--muted);font-size:12px}
-    code{font-family:ui-monospace,Consolas,monospace}
+    /* === Header photo (ajout rapide) === */
+    .site-brand.with-photo{display:flex;align-items:center;gap:1rem}
+    .site-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid #2f4ea2;
+      box-shadow:0 0 0 5px rgba(47,78,162,.25);background:#0b1220}
+    .site-text{display:flex;flex-direction:column}
   </style>
+
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="hero">
-      <div class="top">
-        <div>
-          <h1>Serveur Work-Test — Accueil</h1>
-          <div class="subtitle">
-            Portail local pour tes modules : Work-Test / Mini-WTD / Patrick Billy / Portfolio / XAMPP / Admin / Exports.
-            <br>Objectif : <b>offline, simple, carré</b>.
+  <a href="#main" class="skiplink">Aller au contenu principal</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="site-brand with-photo">
+        <img src="assets/img/patrick-billy.png"
+             alt="Portrait de Patrick Billy"
+             class="site-photo">
+        <div class="site-text">
+          <span class="site-title">Patrick Billy</span>
+          <span class="site-subtitle">Accessibilité · Inclusion · IA appliquée</span>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#expertises">Expertises</a></li>
+          <li><a href="#mini-wtd">Mini-WTD</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#international">International</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- Liens vers les sous-pages détaillées -->
+          <li><a href="pages/competences.html">Compétences détaillées</a></li>
+          <li><a href="pages/rgaa.html">RGAA &amp; accessibilité</a></li>
+          <li><a href="pages/systemes.html">Systèmes &amp; outils</a></li>
+          <li><a href="pages/cv-ia.html">CV interactif IA</a></li>
+          <li><a href="ldl.html">Cuisine LDL</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch" aria-label="Choix de la langue">
+        <button type="button" data-lang="fr" class="is-active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="mg">MG</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+
+          <!-- FR -->
+          <div class="lang-block lang-fr">
+            <p class="hero-kicker">Site officiel</p>
+            <h1>Consultant accessibilité, design inclusif &amp; IA appliquée</h1>
+            <p class="hero-lead">
+              Je conçois des outils numériques simples, accessibles et low-tech pour les personnes,
+              les équipes et les organisations qui travaillent avec le réel&nbsp;: handicap, terrain,
+              contraintes techniques, publics fragiles.
+            </p>
+            <p class="hero-lead">
+              Créateur de <strong>Mini-WTD</strong> (Work-Test-Demo), simulateur d’aménagement de poste
+              et d’analyse de situations de travail.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Me contacter</a>
+              <a href="#expertises" class="btn btn-ghost">Voir mes expertises</a>
+            </div>
+          </div>
+
+          <!-- EN -->
+          <div class="lang-block lang-en" hidden>
+            <p class="hero-kicker">Official website</p>
+            <h1>Digital Accessibility, Inclusive Design &amp; Applied AI</h1>
+            <p class="hero-lead">
+              I design simple, accessible and low-tech digital tools for people, teams and
+              organizations working with real-life constraints: disability, field work, limited
+              infrastructure and vulnerable users.
+            </p>
+            <p class="hero-lead">
+              Creator of <strong>Mini-WTD</strong> (Work-Test-Demo), a workplace accommodation and
+              job-task analysis simulator.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Get in touch</a>
+              <a href="#expertises" class="btn btn-ghost">Explore my skills</a>
+            </div>
+          </div>
+
+          <!-- MG -->
+          <div class="lang-block lang-mg" hidden>
+            <p class="hero-kicker">Toerana ofisialy</p>
+            <h1>Fidirana nomerika, design inclusif &amp; IA ampiharina</h1>
+            <p class="hero-lead">
+              Manorina fitaovana nomerika tsotra sy azo idiran’ny rehetra aho, mifanaraka amin’ny
+              zava-misy&nbsp;: fahasembanana, asa eny ifotony, olana ara-teknika, olona marefo.
+            </p>
+            <p class="hero-lead">
+              Mpamorona ny <strong>Mini-WTD</strong> (Work-Test-Demo), fitaovana simulation
+              amin’ny asa sy fanitsiana toeram-piasana.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Ifandraiso aho</a>
+              <a href="#expertises" class="btn btn-ghost">Jereo ny fahaizako</a>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="badge" title="Statut de la route API (si Express est actif)">
-          <span class="dot ko" id="dot"></span>
-          <strong id="status" aria-live="polite">API : inconnue</strong>
+    <!-- ===== BIO ===== -->
+    <section id="bio" class="section section-bio">
+      <div class="container">
+        <h2>À propos</h2>
+
+        <div class="lang-block lang-fr">
+          <p>
+            Je m’appelle <strong>Patrick Billy</strong>. Je travaille entre le numérique, le handicap,
+            l’inclusion et le terrain. Je viens d’un parcours de graphisme, de formation et de
+            bricolage intelligent avec des moyens limités, ce qui m’a appris à faire
+            <strong>simple, robuste et utile</strong>.
+          </p>
+          <p>
+            Avec <strong>Élan pour tous</strong> et <strong>Mini-WTD</strong>, j’aide des structures
+            à comprendre les situations de travail réelles, à analyser les contraintes, et à
+            imaginer des aménagements concrets – en gardant les personnes au centre, pas les
+            procédures.
+          </p>
+          <p>
+            Je travaille en français, en anglais opérationnel, et je connais bien les enjeux
+            entre la France, Madagascar et les contextes où le numérique n’est pas “premium”.
+          </p>
+        </div>
+
+        <div class="lang-block lang-en" hidden>
+          <p>
+            I am <strong>Patrick Billy</strong>, working at the crossroads of digital tools,
+            disability, inclusion and field reality. My background mixes graphic design,
+            training and “do-more-with-less” problem solving, which pushed me to build
+            <strong>simple, robust and useful</strong> tools.
+          </p>
+          <p>
+            Through <strong>Élan pour tous</strong> and <strong>Mini-WTD</strong>, I help
+            organizations understand real work situations, analyse constraints, and design
+            practical workplace accommodations – keeping people at the center, not procedures.
+          </p>
+          <p>
+            I work in French and operational English, with strong familiarity with both France
+            and Madagascar, and with environments where digital infrastructure is limited.
+          </p>
+        </div>
+
+        <div class="lang-block lang-mg" hidden>
+          <p>
+            Izaho dia <strong>Patrick Billy</strong>, miasa eo anelanelan’ny nomerika,
+            fahasembanana, inclusion ary zava-misy eny ifotony. Avy amin’ny tontolon’ny
+            sary sy fanofanana aho, ka zatra manao vahaolana
+            <strong>tsotra, matanjaka ary mahasoa</strong>.
+          </p>
+          <p>
+            Amin’ny alalan’ny <strong>Élan pour tous</strong> sy <strong>Mini-WTD</strong>,
+            manampy fikambanana sy rafitra aho hahatakatra ny tena asa atao,
+            handinika ny sakana ary hanolotra fanitsiana toeram-piasana tena azo tanterahina.
+          </p>
+          <p>
+            Miasa amin’ny teny frantsay aho, teny anglisy tsotra, ary mahafantatra tsara
+            ny tontolo iainan’i Frantsa sy Madagasikara ary ireo toerana tsy dia matanjaka
+            ny fotodrafitrasa nomerika.
+          </p>
         </div>
       </div>
+    </section>
 
-      <div class="btnrow">
-        <a class="btn" href="./admin/">🔧 Admin</a>
-        <a class="btn" href="./mini-wtd/">🧪 Mini-WTD</a>
-        <a class="btn" href="./patrick-billy/">👤 Patrick Billy — Officiel</a>
-        <a class="btn" href="./pages/xampp.html">🛠️ Configuration XAMPP</a>
-        <a class="btn" href="./portfolio/">🗂️ Portfolio (séparé)</a>
-        <a class="btn" href="./exports/">📦 Exports (dossier)</a>
-      </div>
+    <!-- ===== EXPERTISES ===== -->
+    <section id="expertises" class="section section-expertises">
+      <div class="container">
+        <h2>Expertises</h2>
 
-      <div class="mini" style="margin-top:10px">
-        Conseil : garde ce portail en <code>index.html</code> et remplace ensuite chaque dossier par ton vrai contenu.
-      </div>
-    </div>
+        <div class="expertise-grid">
 
-    <div class="grid">
-      <div class="card">
-        <h2>Infos serveur</h2>
-        <p>Pour vérifier vite que tu es au bon endroit.</p>
-        <pre id="info">Chargement…</pre>
-      </div>
+          <!-- FR -->
+          <div class="lang-block lang-fr">
+            <div class="card-list">
+              <article class="card">
+                <h3>Accessibilité numérique (RGAA / WCAG)</h3>
+                <p>
+                  Audit, structure HTML sémantique, ARIA, navigation clavier, tests lecteurs
+                  d’écran, conseils aux équipes produit et développement.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Design inclusif &amp; UX simple</h3>
+                <p>
+                  Interfaces pensées pour des personnes qui n’aiment pas la technologie,
+                  mais qui doivent l’utiliser quand même. Focus sur la clarté, pas sur les effets.
+                </p>
+              </article>
+              <article class="card">
+                <h3>IA appliquée &amp; chatbots pédagogiques</h3>
+                <p>
+                  Utilisation de l’IA pour expliquer, guider, rassurer et simplifier, plutôt
+                  que compliquer. Chatbots pour RH, formateurs et publics fragiles.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Solutions low-tech &amp; offline</h3>
+                <p>
+                  Outils web autonomes, utilisables sur clé USB ou intranet, adaptés aux
+                  environnements sans réseau ou très contraints.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Simulation de poste &amp; aménagement</h3>
+                <p>
+                  Avec Mini-WTD, analyse des tâches, contraintes, impacts et pistes
+                  d’adaptation réalistes pour le travail.
+                </p>
+              </article>
+            </div>
+          </div>
 
-      <div class="card">
-        <h2>Export (si Express est actif)</h2>
-        <p>Si ton <code>server.js</code> Express tourne, tu peux exporter en 1 clic via <code>/api/export</code>.</p>
-        <div class="btnrow">
-          <button class="btn" id="btnPing" type="button" aria-controls="out">✅ Tester API</button>
-          <button class="btn" id="btnExport" type="button" aria-controls="out">📦 Exporter ZIP</button>
+          <!-- EN -->
+          <div class="lang-block lang-en" hidden>
+            <div class="card-list">
+              <article class="card">
+                <h3>Digital Accessibility (RGAA / WCAG)</h3>
+                <p>
+                  Audits, semantic HTML, ARIA, keyboard navigation, screen reader testing,
+                  guidance for product and development teams.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Inclusive &amp; Low-Tech UX</h3>
+                <p>
+                  Interfaces designed for people who do not love technology, but still
+                  have to use it. Clarity first, effects second.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Applied AI &amp; Assistive Chatbots</h3>
+                <p>
+                  AI used to explain, guide and simplify for HR, trainers and vulnerable
+                  users – not to create extra complexity.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Offline &amp; Low-Infrastructure Tools</h3>
+                <p>
+                  Web tools running on USB or intranet, built for constrained environments
+                  with unreliable or no internet.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Workplace Simulation &amp; Accommodation</h3>
+                <p>
+                  Through Mini-WTD, analysis of tasks, constraints, impact and realistic
+                  workplace accommodations.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- MG -->
+          <div class="lang-block lang-mg" hidden>
+            <div class="card-list">
+              <article class="card">
+                <h3>Fidirana nomerika (RGAA / WCAG)</h3>
+                <p>
+                  Fanombanana ny fidirana, HTML sémantique, ARIA, fitetezana amin’ny
+                  kitendry, fitsapana “screen reader”.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Design inclusif &amp; UX tsotra</h3>
+                <p>
+                  Interface natao ho an’ny olona tsy tia “tech” loatra nefa tsy maintsy mampiasa azy.
+                  Mazava sy mivantana, tsy manafina.
+                </p>
+              </article>
+              <article class="card">
+                <h3>IA ampiharina &amp; chatbot manampy</h3>
+                <p>
+                  IA ampiasaina hanazavana, hitari-dalana sy hanamaivana, ho an’ny RH,
+                  mpampiofana ary olona marefo.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Vahaolana low-tech &amp; offline</h3>
+                <p>
+                  Fitaovana web afaka mandeha amin’ny clé USB na intranet, mety amin’ny
+                  toerana tsy dia misy internet.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Simulation de poste &amp; fanitsiana asa</h3>
+                <p>
+                  Amin’ny alalan’ny Mini-WTD, fandinihana asa, sakana ary fanitsiana
+                  toeram-piasana azo tanterahina.
+                </p>
+              </article>
+            </div>
+          </div>
+
         </div>
-        <pre id="out">—</pre>
       </div>
+    </section>
+
+    <!-- ===== MINI-WTD ===== -->
+    <section id="mini-wtd" class="section section-mini-wtd">
+      <div class="container">
+        <h2>Mini-WTD · Work-Test-Demo</h2>
+
+        <div class="lang-block lang-fr">
+          <p>
+            <strong>Mini-WTD</strong> est un module de simulation de poste et de bilan
+            d’aménagement. Il permet, en quelques écrans, de décrire la situation de travail,
+            les contraintes (motrices, cognitives, sensorielles) et les pistes d’adaptation.
+          </p>
+          <p>
+            Le module est pensé pour fonctionner en <strong>offline</strong> (clé USB,
+            intranet) avec une interface accessible, sobre, utilisable par des RH,
+            des référents handicap, des médecins du travail, des organismes de formation
+            ou des associations.
+          </p>
+        </div>
+
+        <div class="lang-block lang-en" hidden>
+          <p>
+            <strong>Mini-WTD</strong> is a job simulation and workplace accommodation module.
+            In a few screens, it helps describe the work situation, constraints (motor,
+            cognitive, sensory) and realistic adaptation options.
+          </p>
+          <p>
+            It is designed to work <strong>offline</strong> (USB, intranet) with an accessible,
+            low-noise interface for HR teams, disability officers, occupational health,
+            training centers or NGOs.
+          </p>
+        </div>
+
+        <div class="lang-block lang-mg" hidden>
+          <p>
+            <strong>Mini-WTD</strong> dia fitaovana simulation amin’ny asa sy fanitsiana
+            toeram-piasana. Afaka manoritra ny zava-misy, ny sakana ary ny vahaolana
+            azo tanterahina amin’ny alalan’ny efijery vitsivitsy.
+          </p>
+          <p>
+            Noforonina hiasa amin’ny <strong>offline</strong> (clé USB, intranet) izy,
+            miaraka amin’ny interface azo idiran’ny rehetra ho an’ny RH, mpanolotsaina
+            momba ny fahasembanana, toeram-pampiofanana ary ONG.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section section-services">
+      <div class="container">
+        <h2>Services</h2>
+
+        <div class="lang-block lang-fr">
+          <ul class="service-list">
+            <li>Audit et accompagnement en accessibilité numérique (sites, modules, outils internes).</li>
+            <li>Conception ou refonte d’interfaces inclusives, simples et accessibles.</li>
+            <li>Création de modules low-tech/offline (clé USB, intranet, contextes contraints).</li>
+            <li>Accompagnement autour de Mini-WTD pour l’analyse de postes et l’inclusion.</li>
+            <li>Formation et sensibilisation (équipes RH, IT, formateurs, managers).</li>
+          </ul>
+        </div>
+
+        <div class="lang-block lang-en" hidden>
+          <ul class="service-list">
+            <li>Accessibility audits and advisory for websites, tools and internal platforms.</li>
+            <li>Design or redesign of inclusive, simple and accessible interfaces.</li>
+            <li>Creation of low-tech/offline modules (USB, intranet, constrained contexts).</li>
+            <li>Support around Mini-WTD for workplace analysis and disability inclusion.</li>
+            <li>Training and awareness for HR, IT, trainers and managers.</li>
+          </ul>
+        </div>
+
+        <div class="lang-block lang-mg" hidden>
+          <ul class="service-list">
+            <li>Fanombanana sy fanatsarana ny fidirana nomerika (tranonkala, fitaovana anatiny).</li>
+            <li>Famolavolana interface tsotra sy inclusif.</li>
+            <li>Famoronana fitaovana low-tech/offline (clé USB, intranet).</li>
+            <li>Fanarahana manodidina an’i Mini-WTD amin’ny fandinihana asa sy inclusion.</li>
+            <li>Fampiofanana ho an’ny RH, IT, mpampiofana ary mpitantana.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INTERNATIONAL ===== -->
+    <section id="international" class="section section-international">
+      <div class="container">
+        <h2>International &amp; Madagascar</h2>
+
+        <div class="lang-block lang-fr">
+          <p>
+            Je suis basé en France, avec une forte sensibilité pour Madagascar et les contextes
+            où les infrastructures numériques sont limitées. Je suis ouvert à des missions à
+            distance, hybrides ou sur place (selon les possibilités).
+          </p>
+          <p>
+            Domaines privilégiés&nbsp;: accessibilité numérique, inclusion, IA appliquée,
+            outils low-tech, projets à impact social, ONG, secteur public.
+          </p>
+        </div>
+
+        <div class="lang-block lang-en" hidden>
+          <p>
+            Based in France, with strong ties to Madagascar and low-infrastructure contexts.
+            Open to remote, hybrid or on-site missions depending on the situation.
+          </p>
+          <p>
+            Focus areas: digital accessibility, inclusion, applied AI, low-tech tools,
+            social impact projects, NGOs and public sector.
+          </p>
+        </div>
+
+        <div class="lang-block lang-mg" hidden>
+          <p>
+            Any Frantsa no toeram-ponenako, saingy akaiky ny foko i Madagasikara sy ireo
+            toerana mbola marefo ara-fotodrafitrasa nomerika. Misokatra amin’ny asa lavitra
+            na ifangaro aho arakaraka ny toe-javatra.
+          </p>
+          <p>
+            Sehatra tena mahaliana ahy: fidirana nomerika, inclusion, IA ampiharina, fitaovana
+            low-tech, tetikasa sosialy, ONG sy sehatra ho an’ny daholobe.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOG / ACTUALITÉS ===== -->
+    <section id="blog" class="section blog-section">
+      <div class="container">
+        <h2>Actualités &amp; blog</h2>
+
+        <p class="intro">
+          Projets en cours, outils IA, accessibilité, Mini-WTD, cuisine LDL : un aperçu
+          de ce que je construis concrètement sur le terrain.
+        </p>
+
+        <div class="blog-grid">
+
+          <article class="card blog-card">
+            <h3>Accessibilité++ &amp; audits RGAA</h3>
+            <p>
+              Une approche pragmatique de l’accessibilité : audits, tests réels, outils
+              vocaux et simplification pour les équipes qui manquent de temps.
+            </p>
+            <a href="pages/rgaa.html" class="blog-link">Voir mes compétences RGAA →</a>
+          </article>
+
+          <article class="card blog-card">
+            <h3>Mini-WTD sur le terrain</h3>
+            <p>
+              Comment Mini-WTD aide à décrire les situations de travail, les contraintes
+              et les aménagements possibles, même en offline.
+            </p>
+            <a href="#mini-wtd" class="blog-link">Découvrir Mini-WTD →</a>
+          </article>
+
+          <article class="card blog-card">
+            <h3>Assistants IA pour l’inclusion</h3>
+            <p>
+              Secrétaire scolaire, IA pour les profs, outils pour publics fragiles :
+              mes expérimentations d’IA appliquée, sans bullshit.
+            </p>
+            <a href="#services" class="blog-link">Voir les services IA →</a>
+          </article>
+
+          <article class="card blog-card">
+            <h3>Cuisine LDL &amp; santé populaire</h3>
+            <p>
+              Recettes sans graisses saturées, programmes pour entreprises et familles,
+              ateliers populaires autour du “bien manger sans frimer”.
+            </p>
+            <a href="ldl.html" class="blog-link">En savoir plus →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <h2>Contact</h2>
+
+        <div class="lang-block lang-fr">
+          <p>Pour un échange, une mission ou une collaboration&nbsp;:</p>
+          <ul>
+            <li>Email&nbsp;: <a href="mailto:elanpourtous49@gmail.com">elanpourtous49@gmail.com</a></li>
+            <li>LinkedIn&nbsp;: <a href="https://www.linkedin.com/in/patrickbilly" target="_blank" rel="noreferrer">/in/patrickbilly</a></li>
+          </ul>
+        </div>
+
+        <div class="lang-block lang-en" hidden>
+          <p>For any collaboration, project or mission:</p>
+          <ul>
+            <li>Email: <a href="mailto:elanpourtous49@gmail.com">elanpourtous49@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/patrickbilly" target="_blank" rel="noreferrer">/in/patrickbilly</a></li>
+          </ul>
+        </div>
+
+        <div class="lang-block lang-mg" hidden>
+          <p>Raha mila fifampiresahana na fiaraha-miasa:</p>
+          <ul>
+            <li>Email: <a href="mailto:elanpourtous49@gmail.com">elanpourtous49@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/patrickbilly" target="_blank" rel="noreferrer">/in/patrickbilly</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Patrick Billy · Accessibilité · Inclusion · IA appliquée.</p>
+      <p><a href="#hero">Retour en haut</a></p>
     </div>
+  </footer>
 
-    <footer>
-      ⚠️ Si tu utilises <b>http-server</b>, les boutons API ne marcheront pas (normal).  
-      Ils marchent uniquement avec ton <b>Express</b> (server.js).
-      <br>• Le <b>Portfolio</b> est un dossier séparé (<code>/portfolio/</code>) pour éviter de mélanger le site officiel et les pages vitrine.
-    </footer>
-  </div>
-
-<script>
-  const statusEl = document.getElementById("status");
-  const dot = document.getElementById("dot");
-  const infoEl = document.getElementById("info");
-  const outEl = document.getElementById("out");
-
-  function setApi(ok){
-    statusEl.textContent = ok ? "API : OK" : "API : KO (ou non lancée)";
-    dot.className = "dot " + (ok ? "ok" : "ko");
-  }
-
-  function showInfo(){
-    const host = location.hostname || "localhost";
-    const port = location.port || "(auto)";
-    const proto = location.protocol;
-    infoEl.textContent =
-`URL actuelle : ${proto}//${host}${location.port ? ":"+port : ""}/
-Page       : ${location.pathname}
-User-Agent : ${navigator.userAgent}`;
-  }
-
-  async function ping(){
-    try{
-      const r = await fetch("/api/ping", {cache:"no-store"});
-      const j = await r.json();
-      setApi(!!j.ok);
-      outEl.textContent = JSON.stringify(j, null, 2);
-    }catch(e){
-      setApi(false);
-      outEl.textContent = "Ping KO: " + e.message;
-    }
-  }
-
-  async function doExport(){
-    outEl.textContent = "Export en cours…";
-    try{
-      const r = await fetch("/api/export", {cache:"no-store"});
-      const j = await r.json();
-      if(!j.ok) throw new Error(j.error || "export failed");
-      setApi(true);
-      outEl.textContent = JSON.stringify(j, null, 2);
-      window.open(j.download_url, "_blank");
-    }catch(e){
-      setApi(false);
-      outEl.textContent = "Export KO: " + e.message;
-    }
-  }
-
-  document.getElementById("btnPing").addEventListener("click", ping);
-  document.getElementById("btnExport").addEventListener("click", doExport);
-
-  showInfo();
-  ping();
-</script>
+  <script src="assets/js/lang-switch.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-'@ | Set-Content "E:\serveur-work-test\WEB\index.html" -Encoding UTF8
+
