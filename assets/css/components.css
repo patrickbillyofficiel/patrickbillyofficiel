@@ -399,3 +399,61 @@
     height: 56px;
   }
 }
+
+/* NAV : ne casse pas les mots */
+.site-nav a{
+  white-space: nowrap;
+}
+
+/* NAV : wrap propre + espacement */
+.site-nav ul{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  align-items:center;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.site-nav li{margin:0}
+.site-nav a{
+  display:inline-block;
+  padding:8px 10px;
+  border-radius:10px;
+}
+.site-nav a:hover{
+  background: rgba(255,255,255,.06);
+}
+
+/* HEADER : alignement propre */
+.header-inner{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+}
+
+/* Marque plus compacte */
+.site-brand.with-photo{
+  min-width: 220px;
+}
+.site-title{
+  font-size: 1.25rem;
+}
+.site-subtitle{
+  font-size: .95rem;
+  opacity: .9;
+}
+
+@media (max-width: 980px){
+  .header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .lang-switch{
+    margin-top:10px;
+  }
+  .site-nav ul{
+    gap:10px;
+  }
+}
