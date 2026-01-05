@@ -9,13 +9,19 @@
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
+
+  <!-- Icons / PWA (optionnel mais propre) -->
+  <link rel="icon" href="../assets/img/pb.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="../assets/img/pb-128.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#0B1220">
 </head>
 
 <body>
   <!-- MINI-PLAYER FLOTTANT -->
   <div class="voice-player" hidden>
-    <button id="vp-pause">⏯ Pause</button>
-    <button id="vp-stop">⏹ Stop</button>
+    <button id="vp-pause" type="button">⏯ Pause</button>
+    <button id="vp-stop" type="button">⏹ Stop</button>
   </div>
 
   <a href="#main" class="skiplink">Aller au contenu principal</a>
@@ -28,33 +34,38 @@
         <span class="site-subtitle">Accessibilité · Inclusion · IA appliquée</span>
       </div>
 
-      <nav class="site-nav" aria-label="Navigation principale">
+      <!-- ✅ Menu mobile -->
+      <button class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        Menu
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Navigation principale">
         <ul>
           <li><a href="../index.html#hero">Accueil</a></li>
           <li><a href="../index.html#bio">Bio</a></li>
+          <li><a href="../index.html#expertises">Expertises</a></li>
+          <li><a href="../index.html#mini-wtd">Mini-WTD</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+
           <li><a href="competences.html">Compétences</a></li>
           <li><a href="rgaa.html">RGAA</a></li>
           <li><a href="systemes.html">Systèmes</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="cv-ia.html" aria-current="page">CV IA</a></li>
+
           <li><a href="../index.html#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- ONGLET LANGUES -->
-<div class="ia-tabs">
-  <button class="ia-tab is-active" data-target="ia-fr">FR</button>
-  <button class="ia-tab" data-target="ia-en">EN</button>
-  <button class="ia-tab" data-target="ia-mg">MG</button>
-</div>
-
-     <!-- BOUTON VOIX -->
-<div class="ia-voice">
-  <button id="speak-btn" class="btn btn-ghost" type="button">
-    Lire le résumé à haute voix
-  </button>
-  <p id="voice-note" class="note" aria-live="polite"></p>
-</div>
+      <!-- Langues (FR/EN/MG) pour le texte de page -->
+      <div class="lang-switch" aria-label="Choix de la langue">
+        <button type="button" data-lang="fr" class="is-active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="mg">MG</button>
+      </div>
     </div>
   </header>
 
@@ -63,7 +74,7 @@
     <!-- HERO -->
     <section class="section">
       <div class="container">
-        <h1>CV interactif & comparateur IA</h1>
+        <h1>CV interactif &amp; comparateur IA</h1>
 
         <div class="lang-block lang-fr">
           <p>Comparateur IA multilingue (FR · EN · MG) pour rapprocher votre offre et mon profil structuré.</p>
@@ -96,17 +107,17 @@
               <li>Accessibilité numérique (RGAA / WCAG) – <strong>Expert</strong></li>
               <li>Solutions low-tech / offline – <strong>Expert</strong></li>
               <li>IA appliquée handicap / pédagogie – <strong>Expert</strong></li>
-              <li>Design inclusif & UX simple – <strong>Avancé</strong></li>
-              <li>Formation & accompagnement – <strong>Expert</strong></li>
+              <li>Design inclusif &amp; UX simple – <strong>Avancé</strong></li>
+              <li>Formation &amp; accompagnement – <strong>Expert</strong></li>
             </ul>
           </article>
 
           <article class="card">
             <h3>Types de missions</h3>
             <ul>
-              <li>Audit accessibilité & mise en conformité.</li>
+              <li>Audit accessibilité &amp; mise en conformité.</li>
               <li>Simulation d’aménagement (Mini-WTD).</li>
-              <li>Accompagnement RH & handicap.</li>
+              <li>Accompagnement RH &amp; handicap.</li>
               <li>Formations IA minimum vital.</li>
               <li>Interventions France / Madagascar.</li>
             </ul>
@@ -140,10 +151,10 @@
 
             <div class="textarea-wrapper">
               <textarea id="job-offer" rows="10" placeholder="Collez ici l’offre…"></textarea>
-              <button id="micro-btn" class="micro-btn" aria-label="Dicter l’offre">🎤</button>
+              <button id="micro-btn" class="micro-btn" type="button" aria-label="Dicter l’offre">🎤</button>
             </div>
 
-            <button id="analyze-btn" class="btn btn-primary" style="margin-top:1rem;">
+            <button id="analyze-btn" class="btn btn-primary" type="button" style="margin-top:1rem;">
               Analyser l’offre avec l’IA
             </button>
 
@@ -159,17 +170,17 @@
             <h3>2. Résultat IA multilingue</h3>
 
             <!-- ONGLET LANGUES -->
-            <div class="ia-tabs">
-              <button class="ia-tab is-active" data-target="ia-fr">FR</button>
-              <button class="ia-tab" data-target="ia-en">EN</button>
-              <button class="ia-tab" data-target="ia-mg">MG</button>
+            <div class="ia-tabs" aria-label="Choix de langue pour le résultat IA">
+              <button class="ia-tab is-active" type="button" data-target="ia-fr">FR</button>
+              <button class="ia-tab" type="button" data-target="ia-en">EN</button>
+              <button class="ia-tab" type="button" data-target="ia-mg">MG</button>
             </div>
 
             <!-- BOUTONS AUDIO -->
-            <div class="voice-controls">
-              <button id="voice-read-btn" class="btn btn-ghost">🔊 Lire</button>
-              <button id="voice-stop-btn" class="btn btn-ghost">⏹ Stop</button>
-              <button id="voice-dictate-btn" class="btn btn-primary">🎤 Dicter</button>
+            <div class="voice-controls" aria-label="Contrôles audio">
+              <button id="voice-read-btn" class="btn btn-ghost" type="button">🔊 Lire</button>
+              <button id="voice-stop-btn" class="btn btn-ghost" type="button">⏹ Stop</button>
+              <button id="voice-dictate-btn" class="btn btn-primary" type="button">🎤 Dicter</button>
             </div>
 
             <!-- FR -->
@@ -222,7 +233,7 @@
         <h2>Connexion IA</h2>
         <div class="card">
           <p>
-            Le moteur IA peut être relié à une API (ChatGPT / interne).  
+            Le moteur IA peut être relié à une API (ChatGPT / interne).
             Cette version simule l'analyse pour démontrer le format FR·EN·MG.
           </p>
         </div>
@@ -234,14 +245,17 @@
   <footer class="site-footer">
     <div class="container">
       <p>&copy; <span id="year"></span> Patrick Billy</p>
+      <p><a href="../index.html#hero">Retour à l’accueil</a></p>
     </div>
   </footer>
 
+  <!-- ✅ Scripts : une seule fois chacun -->
   <script src="../assets/js/lang-switch.js"></script>
+  <script src="../assets/js/nav-toggle.js"></script>
   <script src="../assets/js/cv-ia.js"></script>
   <script src="../assets/js/voice-module.js"></script>
-  <script src="../assets/js/lang-switch.js"></script>
-  <script src="../assets/js/cv-ia.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
