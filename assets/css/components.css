@@ -464,3 +464,59 @@
   align-items: center;
 }
 
+
+/* ===========================
+   MENU MOBILE (bouton)
+   =========================== */
+
+.nav-toggle{
+  display:none;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:inherit;
+  padding:.55rem .85rem;
+  border-radius:999px;
+  font-weight:700;
+}
+
+.nav-toggle:focus{
+  outline:2px solid rgba(110,231,255,.8);
+  outline-offset:3px;
+}
+
+/* Mobile only */
+@media (max-width: 640px){
+  .nav-toggle{ display:inline-flex; align-items:center; gap:.5rem; }
+
+  /* Cache la nav par défaut */
+  .site-nav{
+    display:none;
+    width:100%;
+    margin-top:.75rem;
+  }
+
+  /* Quand ouvert */
+  .site-nav.is-open{
+    display:block;
+  }
+
+  /* Liste en colonne, propre */
+  .site-nav ul{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:.5rem .75rem;
+    padding-left:0;
+    margin:0;
+  }
+
+  .site-nav li{ margin:0; list-style:none; }
+
+  .site-nav a{
+    display:block;
+    text-align:center;
+    padding:.55rem .6rem;
+    border-radius:12px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.10);
+  }
+}
