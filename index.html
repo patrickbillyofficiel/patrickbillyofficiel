@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
+
   <!-- Icons / PWA -->
   <link rel="icon" href="assets/img/pb.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="assets/img/pb-128.png">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#0B1220">
-
 
   <style>
     /* === Header photo (ajout rapide) === */
@@ -24,7 +24,6 @@
       box-shadow:0 0 0 5px rgba(47,78,162,.25);background:#0b1220}
     .site-text{display:flex;flex-direction:column}
   </style>
-
 </head>
 
 <body>
@@ -43,7 +42,16 @@
         </div>
       </div>
 
-      <nav class="site-nav" aria-label="Navigation principale">
+      <!-- ✅ Bouton mobile -->
+      <button class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        Menu
+      </button>
+
+      <!-- ✅ id pour le toggle -->
+      <nav class="site-nav" id="primary-nav" aria-label="Navigation principale">
         <ul>
           <li><a href="#hero">Accueil</a></li>
           <li><a href="#bio">Bio</a></li>
@@ -131,6 +139,7 @@
               <a href="#expertises" class="btn btn-ghost">Jereo ny fahaizako</a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -503,7 +512,7 @@
               Recettes sans graisses saturées, programmes pour entreprises et familles,
               ateliers populaires autour du “bien manger sans frimer”.
             </p>
-            <a href="ldl.html" class="blog-link">En savoir plus →</a>
+            <a href="pages/ldl.html" class="blog-link">En savoir plus →</a>
           </article>
 
         </div>
@@ -551,10 +560,9 @@
   </footer>
 
   <script src="assets/js/lang-switch.js"></script>
+  <script src="assets/js/nav-toggle.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
