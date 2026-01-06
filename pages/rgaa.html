@@ -10,6 +10,12 @@
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/components.css">
+
+  <!-- Icons / PWA (optionnel mais propre) -->
+  <link rel="icon" href="../assets/img/pb.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="../assets/img/pb-128.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#0B1220">
 </head>
 
 <body>
@@ -22,17 +28,33 @@
         <span class="site-subtitle">Accessibilité · Inclusion · IA appliquée</span>
       </div>
 
-      <nav class="site-nav" aria-label="Navigation principale">
+      <!-- ✅ Menu mobile -->
+      <button class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        Menu
+      </button>
+
+      <!-- ✅ id pour le toggle -->
+      <nav class="site-nav" id="primary-nav" aria-label="Navigation principale">
         <ul>
           <li><a href="../index.html#hero">Accueil</a></li>
           <li><a href="../index.html#bio">Bio</a></li>
           <li><a href="../index.html#expertises">Expertises</a></li>
+          <li><a href="../index.html#mini-wtd">Mini-WTD</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+
           <li><a href="competences.html">Compétences</a></li>
           <li><a href="rgaa.html" aria-current="page">RGAA</a></li>
           <li><a href="systemes.html">Systèmes</a></li>
+
+          <!-- ⚠️ Garde ce lien seulement si la page existe -->
           <li><a href="formations.html">Formations</a></li>
+
           <li><a href="cv-ia.html">CV IA</a></li>
           <li><a href="blog.html">Blog</a></li>
+
           <li><a href="../index.html#contact">Contact</a></li>
         </ul>
       </nav>
@@ -335,6 +357,7 @@
   </footer>
 
   <script src="../assets/js/lang-switch.js"></script>
+  <script src="../assets/js/nav-toggle.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
