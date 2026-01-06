@@ -5,6 +5,7 @@
   <title>Portfolio · Patrick Billy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio de Patrick Billy : accessibilité numérique, design inclusif, IA appliquée, solutions low-tech/offline. Projets concrets et résultats.">
+
   <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 
@@ -14,7 +15,7 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
-        <a href="index.html">Patrick Billy — Portfolio</a>
+        <a href="index.html" aria-label="Accueil du portfolio">Patrick Billy — Portfolio</a>
         <small>Accessibilité · Inclusion · IA appliquée · Low-tech</small>
       </div>
 
@@ -30,11 +31,11 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero">
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <p class="kicker">Portfolio (séparé du site officiel)</p>
-        <h1>Outils simples, robustes, accessibles — pensés pour le terrain.</h1>
+        <h1 id="hero-title">Outils simples, robustes, accessibles — pensés pour le terrain.</h1>
         <p class="lead">
           Je travaille avec des contraintes réelles : handicap, usage en conditions imparfaites,
           équipes pressées, infrastructures limitées. Je fais du numérique qui sert, pas du numérique qui brille.
@@ -47,16 +48,16 @@
       </div>
     </section>
 
-    <section class="section-tight">
+    <section class="section-tight" aria-labelledby="proofs-title">
       <div class="container">
-        <h2>3 preuves rapides</h2>
+        <h2 id="proofs-title">3 preuves rapides</h2>
 
         <div class="grid grid-3">
           <article class="card">
             <div class="card-inner">
               <h3>Accessibilité (RGAA / WCAG)</h3>
               <p class="muted">Audit, corrections, re-tests, lecteur d’écran, clavier. On vise le réel, pas le PDF décoratif.</p>
-              <div class="meta">
+              <div class="meta" aria-label="Mots-clés">
                 <span class="badge">Audit</span>
                 <span class="badge">Backlog</span>
                 <span class="badge">Re-test</span>
@@ -68,7 +69,7 @@
             <div class="card-inner">
               <h3>Low-tech &amp; offline</h3>
               <p class="muted">Modules web utilisables sans réseau : clé USB, intranet, environnements contraints.</p>
-              <div class="meta">
+              <div class="meta" aria-label="Mots-clés">
                 <span class="badge">Robuste</span>
                 <span class="badge">Simple</span>
                 <span class="badge">Maintenable</span>
@@ -80,7 +81,7 @@
             <div class="card-inner">
               <h3>IA appliquée (utile)</h3>
               <p class="muted">Assistants pédagogiques pour expliquer, guider, rassurer. Pas de “wahou”, du concret.</p>
-              <div class="meta">
+              <div class="meta" aria-label="Mots-clés">
                 <span class="badge">Pédagogie</span>
                 <span class="badge">Guidance</span>
                 <span class="badge">Garde-fous</span>
@@ -89,20 +90,20 @@
           </article>
         </div>
 
-        <hr class="hr">
+        <hr class="hr" aria-hidden="true">
       </div>
     </section>
 
-    <section class="section-tight">
+    <section class="section-tight" aria-labelledby="featured-title">
       <div class="container">
-        <h2>Projets en vedette</h2>
+        <h2 id="featured-title">Projets en vedette</h2>
 
         <div class="grid grid-2">
           <article class="card project-card" data-tags="low-tech,accessibilite">
             <div class="card-inner">
               <h3>Mini-WTD</h3>
               <p>Simulation de poste et pistes d’aménagement : simple, utilisable, centré personne.</p>
-              <div class="meta">
+              <div class="meta" aria-label="Mots-clés">
                 <span class="badge">Low-tech</span>
                 <span class="badge">Inclusion</span>
                 <span class="badge">Offline</span>
@@ -115,7 +116,7 @@
             <div class="card-inner">
               <h3>Assistant IA (RH / formation)</h3>
               <p>Un assistant qui reformule, explique et guide — sans noyer les gens.</p>
-              <div class="meta">
+              <div class="meta" aria-label="Mots-clés">
                 <span class="badge">IA appliquée</span>
                 <span class="badge">Pédagogie</span>
                 <span class="badge">Clarté</span>
@@ -128,7 +129,7 @@
             <div class="card-inner">
               <h3>Audit RGAA + backlog correctifs</h3>
               <p>Audit + priorisation + tickets exploitables. Le but : corriger, pas “se couvrir”.</p>
-              <div class="meta">
+              <div class="meta" aria-label="Mots-clés">
                 <span class="badge">RGAA</span>
                 <span class="badge">WCAG</span>
                 <span class="badge">Re-test</span>
@@ -141,7 +142,7 @@
             <div class="card-inner">
               <h3>Module offline (clé USB)</h3>
               <p>Déploiement simple : copie, ouverture, ça tourne. Pas besoin de cloud pour exister.</p>
-              <div class="meta">
+              <div class="meta" aria-label="Mots-clés">
                 <span class="badge">Offline</span>
                 <span class="badge">USB</span>
                 <span class="badge">Intranet</span>
@@ -151,13 +152,14 @@
           </article>
         </div>
 
-        <hr class="hr">
+        <hr class="hr" aria-hidden="true">
       </div>
     </section>
 
-    <section class="section-tight">
+    <section class="section-tight" aria-labelledby="method-title">
       <div class="container">
-        <h2>Méthode</h2>
+        <h2 id="method-title">Méthode</h2>
+
         <div class="kpi">
           <div class="card"><div class="card-inner"><h3>1. Diagnostiquer</h3><p class="muted">Contexte, contraintes, risques. On évite les suppositions.</p></div></div>
           <div class="card"><div class="card-inner"><h3>2. Simplifier</h3><p class="muted">UX, contenu, parcours. On enlève ce qui bloque.</p></div></div>
@@ -169,10 +171,10 @@
       </div>
     </section>
 
-    <section class="section-tight">
+    <section class="section-tight" aria-labelledby="cta-title">
       <div class="container">
         <div class="callout">
-          <h2>Tu veux un outil qui marche vraiment ?</h2>
+          <h2 id="cta-title">Tu veux un outil qui marche vraiment ?</h2>
           <p class="muted">Tu me donnes ton contexte, tes contraintes, ton public. Je te réponds avec du concret.</p>
           <div class="actions">
             <a class="btn btn-primary" href="contact.html">Me contacter</a>
@@ -187,6 +189,7 @@
     <div class="container">
       <p>© <span id="year"></span> Patrick Billy — Portfolio.</p>
       <p class="small">Si ça ne marche pas au clavier, ça ne marche pas.</p>
+      <p><a href="#main">Retour en haut</a></p>
     </div>
   </footer>
 
