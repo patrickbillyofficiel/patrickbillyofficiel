@@ -14,7 +14,7 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
-        <a href="index.html">Patrick Billy — Portfolio</a>
+        <a href="index.html" aria-label="Accueil du portfolio">Patrick Billy — Portfolio</a>
         <small>Services (clairs, livrables concrets)</small>
       </div>
 
@@ -30,15 +30,16 @@
     </div>
   </header>
 
-  <main id="main" class="section">
+  <main id="main" class="section" tabindex="-1">
     <div class="container">
       <h1>Services</h1>
       <p class="muted">Tu payes pour un résultat : compréhension, accessibilité, robustesse. Pas pour un “effet waouh”.</p>
 
       <div class="grid grid-2">
-        <article class="card">
+
+        <article class="card" aria-labelledby="svc-audit">
           <div class="card-inner">
-            <h2 class="h3">Audit accessibilité (RGAA / WCAG)</h2>
+            <h2 class="h3" id="svc-audit">Audit accessibilité (RGAA / WCAG)</h2>
             <ul>
               <li>Audit ciblé ou complet (selon taille et risques)</li>
               <li>Preuves + recommandations actionnables</li>
@@ -49,9 +50,9 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" aria-labelledby="svc-correction">
           <div class="card-inner">
-            <h2 class="h3">Accompagnement correction</h2>
+            <h2 class="h3" id="svc-correction">Accompagnement correction</h2>
             <ul>
               <li>Revues code &amp; UI</li>
               <li>Support dev / produit</li>
@@ -61,9 +62,9 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" aria-labelledby="svc-ux">
           <div class="card-inner">
-            <h2 class="h3">Design inclusif &amp; UX simple</h2>
+            <h2 class="h3" id="svc-ux">Design inclusif &amp; UX simple</h2>
             <ul>
               <li>Parcours clairs, micro-textes utiles</li>
               <li>Erreurs compréhensibles</li>
@@ -73,9 +74,9 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" aria-labelledby="svc-offline">
           <div class="card-inner">
-            <h2 class="h3">Modules low-tech / offline</h2>
+            <h2 class="h3" id="svc-offline">Modules low-tech / offline</h2>
             <ul>
               <li>Outils autonomes (USB / intranet)</li>
               <li>Robustesse, performance, compatibilité</li>
@@ -85,9 +86,9 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" aria-labelledby="svc-ai">
           <div class="card-inner">
-            <h2 class="h3">IA appliquée (assistants utiles)</h2>
+            <h2 class="h3" id="svc-ai">IA appliquée (assistants utiles)</h2>
             <ul>
               <li>Guidance pas à pas (RH, formation, publics fragiles)</li>
               <li>Reformulation, explication, simplification</li>
@@ -98,9 +99,9 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" aria-labelledby="svc-training">
           <div class="card-inner">
-            <h2 class="h3">Formation &amp; sensibilisation</h2>
+            <h2 class="h3" id="svc-training">Formation &amp; sensibilisation</h2>
             <ul>
               <li>Ateliers courts et pratico-pratiques</li>
               <li>Cas réels de ton équipe</li>
@@ -109,9 +110,10 @@
             </ul>
           </div>
         </article>
+
       </div>
 
-      <hr class="hr">
+      <hr class="hr" aria-hidden="true">
 
       <section class="callout" aria-labelledby="process">
         <h2 id="process">Comment on travaille</h2>
@@ -133,9 +135,12 @@
   <footer class="footer" role="contentinfo">
     <div class="container">
       <p>© <span id="year"></span> Patrick Billy — Portfolio.</p>
+      <p><a href="#main">Retour en haut</a></p>
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
