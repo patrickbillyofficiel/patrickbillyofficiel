@@ -5,6 +5,7 @@
   <title>À propos · Portfolio Patrick Billy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="À propos : parcours, méthode, valeurs. Accessibilité, inclusion, IA appliquée, low-tech/offline.">
+
   <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 
@@ -14,7 +15,7 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
-        <a href="index.html">Patrick Billy — Portfolio</a>
+        <a href="index.html" aria-label="Accueil du portfolio">Patrick Billy — Portfolio</a>
         <small>Le terrain d’abord, le reste ensuite</small>
       </div>
 
@@ -30,14 +31,14 @@
     </div>
   </header>
 
-  <main id="main" class="section">
+  <main id="main" class="section" tabindex="-1">
     <div class="container">
       <h1>À propos</h1>
 
       <div class="grid grid-2">
-        <section class="card">
+        <section class="card" aria-labelledby="angle-title">
           <div class="card-inner">
-            <h2 class="h3">Mon angle</h2>
+            <h2 class="h3" id="angle-title">Mon angle</h2>
             <p class="muted">
               Je conçois des outils numériques utilisables par des humains, y compris quand
               ils sont fatigués, stressés, en situation de handicap, ou avec peu de moyens.
@@ -49,9 +50,9 @@
           </div>
         </section>
 
-        <section class="card">
+        <section class="card" aria-labelledby="refus-title">
           <div class="card-inner">
-            <h2 class="h3">Ce que je refuse</h2>
+            <h2 class="h3" id="refus-title">Ce que je refuse</h2>
             <ul>
               <li>Les effets et buzzwords qui masquent les problèmes.</li>
               <li>La complexité “pour faire sérieux”.</li>
@@ -62,11 +63,11 @@
         </section>
       </div>
 
-      <hr class="hr">
+      <hr class="hr" aria-hidden="true">
 
-      <section class="card">
+      <section class="card" aria-labelledby="timeline-title">
         <div class="card-inner">
-          <h2 class="h3">Repères (mini timeline)</h2>
+          <h2 class="h3" id="timeline-title">Repères (mini timeline)</h2>
           <ul>
             <li><strong>Graphisme &amp; formation</strong> → comprendre l’attention, la lisibilité, la transmission.</li>
             <li><strong>Terrain &amp; contraintes</strong> → faire simple, robuste, utile.</li>
@@ -88,9 +89,12 @@
   <footer class="footer" role="contentinfo">
     <div class="container">
       <p>© <span id="year"></span> Patrick Billy — Portfolio.</p>
+      <p><a href="#main">Retour en haut</a></p>
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
