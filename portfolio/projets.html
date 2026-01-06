@@ -5,6 +5,7 @@
   <title>Projets · Portfolio Patrick Billy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Liste des projets : accessibilité (RGAA/WCAG), IA appliquée, low-tech/offline, formation.">
+
   <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 
@@ -14,7 +15,7 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
-        <a href="index.html">Patrick Billy — Portfolio</a>
+        <a href="index.html" aria-label="Accueil du portfolio">Patrick Billy — Portfolio</a>
         <small>Projets concrets, contraintes réelles</small>
       </div>
 
@@ -30,66 +31,68 @@
     </div>
   </header>
 
-  <main id="main" class="section">
+  <main id="main" class="section" tabindex="-1">
     <div class="container">
       <h1>Projets</h1>
       <p class="muted">Filtre simple : clique. Pas besoin de formulaire NASA.</p>
 
-      <div class="filters" aria-label="Filtres">
-        <button type="button" class="badge" data-filter="tous">Tous</button>
-        <button type="button" class="badge" data-filter="accessibilite">Accessibilité</button>
-        <button type="button" class="badge" data-filter="ia">IA</button>
-        <button type="button" class="badge" data-filter="low-tech">Low-tech</button>
-        <button type="button" class="badge" data-filter="formation">Formation</button>
+      <div class="filters" aria-label="Filtres projets">
+        <button type="button" class="badge is-active" data-filter="tous" aria-pressed="true">Tous</button>
+        <button type="button" class="badge" data-filter="accessibilite" aria-pressed="false">Accessibilité</button>
+        <button type="button" class="badge" data-filter="ia" aria-pressed="false">IA</button>
+        <button type="button" class="badge" data-filter="low-tech" aria-pressed="false">Low-tech</button>
+        <button type="button" class="badge" data-filter="formation" aria-pressed="false">Formation</button>
       </div>
 
-      <div class="grid grid-2">
-        <article class="card project-card" data-tags="low-tech,accessibilite">
+      <p id="filter-status" class="note small" aria-live="polite" style="margin-top:10px;"></p>
+
+      <div class="grid grid-2" id="projects-grid">
+        <article class="card project-card" data-tags="low-tech,accessibilite" aria-labelledby="p-mini-wtd">
           <div class="card-inner">
-            <h2 class="h3">Mini-WTD</h2>
+            <h2 class="h3" id="p-mini-wtd">Mini-WTD</h2>
             <p><strong>Problème :</strong> décrire les situations de travail sans perdre les gens.</p>
             <p><strong>Solution :</strong> module simple, offline, centré sur les contraintes.</p>
             <p><strong>Résultat :</strong> analyse plus rapide + pistes d’aménagement compréhensibles.</p>
-            <div class="meta">
+            <div class="meta" aria-label="Mots-clés">
               <span class="badge">Low-tech</span><span class="badge">Offline</span><span class="badge">Inclusion</span>
             </div>
             <p class="more"><a class="btn btn-outline" href="projets/mini-wtd.html">Voir le projet →</a></p>
           </div>
         </article>
 
-        <article class="card project-card" data-tags="ia,formation">
+        <article class="card project-card" data-tags="ia,formation" aria-labelledby="p-assistant-ia">
           <div class="card-inner">
-            <h2 class="h3">Assistant IA (RH / formation)</h2>
+            <h2 class="h3" id="p-assistant-ia">Assistant IA (RH / formation)</h2>
             <p><strong>Problème :</strong> documents et procédures incompréhensibles pour beaucoup.</p>
             <p><strong>Solution :</strong> assistant qui reformule, explique, guide étape par étape.</p>
             <p><strong>Résultat :</strong> moins d’erreurs + autonomie + moins d’allers-retours.</p>
-            <div class="meta">
+            <div class="meta" aria-label="Mots-clés">
               <span class="badge">IA</span><span class="badge">Pédagogie</span><span class="badge">Clarté</span>
             </div>
             <p class="more"><a class="btn btn-outline" href="projets/assistant-ia.html">Voir le projet →</a></p>
           </div>
         </article>
 
-        <article class="card project-card" data-tags="accessibilite">
+        <article class="card project-card" data-tags="accessibilite" aria-labelledby="p-audit-rgaa">
           <div class="card-inner">
-            <h2 class="h3">Audit RGAA + backlog correctifs</h2>
+            <h2 class="h3" id="p-audit-rgaa">Audit RGAA + backlog correctifs</h2>
             <p><strong>Problème :</strong> non-conformités bloquantes, parcours fragile au clavier.</p>
             <p><strong>Solution :</strong> audit + priorisation + tickets exploitables.</p>
             <p><strong>Résultat :</strong> corrections ciblées + re-tests + montée en compétence.</p>
-            <div class="meta">
+            <div class="meta" aria-label="Mots-clés">
               <span class="badge">RGAA</span><span class="badge">WCAG</span><span class="badge">Re-test</span>
             </div>
             <p class="more"><a class="btn btn-outline" href="projets/audit-rgaa.html">Voir le projet →</a></p>
           </div>
         </article>
 
-        <article class="card project-card" data-tags="low-tech">
+        <article class="card project-card" data-tags="low-tech" aria-labelledby="p-offline-usb">
           <div class="card-inner">
-            <h2 class="h3">Module offline (clé USB)</h2>
+            <h2 class="h3" id="p-offline-usb">Module offline (clé USB)</h2>
             <p><strong>Problème :</strong> pas de réseau fiable, besoin d’un outil terrain.</p>
             <p><strong>Solution :</strong> pack autonome (HTML/CSS/JS) + doc + procédure.</p>
             <p><strong>Résultat :</strong> usage immédiat, sans dépendances.</p>
-            <div class="meta">
+            <div class="meta" aria-label="Mots-clés">
               <span class="badge">Offline</span><span class="badge">USB</span><span class="badge">Intranet</span>
             </div>
             <p class="more"><a class="btn btn-outline" href="projets/offline-usb.html">Voir le projet →</a></p>
@@ -97,10 +100,10 @@
         </article>
       </div>
 
-      <hr class="hr">
+      <hr class="hr" aria-hidden="true">
 
-      <div class="callout">
-        <h2>Tu as un contexte similaire ?</h2>
+      <div class="callout" aria-labelledby="cta-title">
+        <h2 id="cta-title">Tu as un contexte similaire ?</h2>
         <p class="muted">Décris juste : public + contraintes + deadline. Je te réponds avec une approche et des livrables.</p>
         <div class="actions">
           <a class="btn btn-primary" href="contact.html">Me contacter</a>
@@ -113,10 +116,43 @@
   <footer class="footer" role="contentinfo">
     <div class="container">
       <p>© <span id="year"></span> Patrick Billy — Portfolio.</p>
+      <p><a href="#main">Retour en haut</a></p>
     </div>
   </footer>
 
   <script src="assets/js/portfolio.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Bonus: rend les filtres accessibles même si portfolio.js ne gère pas aria-pressed
+    (function () {
+      const filters = document.querySelectorAll('.filters .badge[data-filter]');
+      const status = document.getElementById('filter-status');
+
+      function setPressed(activeBtn) {
+        filters.forEach(btn => {
+          const isActive = btn === activeBtn;
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+          if (isActive) btn.classList.add('is-active');
+          else btn.classList.remove('is-active');
+        });
+      }
+
+      filters.forEach(btn => {
+        btn.addEventListener('click', () => {
+          setPressed(btn);
+          const label = btn.textContent.trim();
+          status.textContent = `Filtre actif : ${label}.`;
+        });
+      });
+
+      // état initial
+      const initial = document.querySelector('.filters .badge.is-active') || filters[0];
+      if (initial) {
+        setPressed(initial);
+        status.textContent = `Filtre actif : ${initial.textContent.trim()}.`;
+      }
+    })();
+  </script>
 </body>
 </html>
