@@ -1,173 +1,20 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-
-  <title>Patrick Billy · Accessibilité, Inclusion & IA appliquée</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Site officiel de Patrick Billy : consultant en accessibilité numérique, design inclusif, IA appliquée et solutions low-tech/offline. Créateur de Mini-WTD.">
-
-  <!-- Open Graph / LinkedIn -->
-  <meta property="og:title" content="Patrick Billy · Accessibilité, Inclusion & IA appliquée">
-  <meta property="og:description"
-        content="Consultant en accessibilité numérique, design inclusif, IA appliquée et solutions low-tech/offline. Créateur de Mini-WTD.">
-  <meta property="og:url" content="https://patrickbillyofficiel.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://patrickbillyofficiel.github.io/assets/img/preview.png">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-
-  <!-- Icons / PWA -->
-  <link rel="icon" href="assets/img/pb.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="assets/img/pb-128.png">
-  <link rel="manifest" href="/manifest.webmanifest">
-  <meta name="theme-color" content="#0B1220">
-
-  <style>
-    .site-brand.with-photo{display:flex;align-items:center;gap:1rem}
-    .site-photo{
-      width:72px;height:72px;border-radius:50%;object-fit:cover;
-      border:3px solid #2f4ea2;
-      box-shadow:0 0 0 5px rgba(47,78,162,.25);
-      background:#0b1220
-    }
-    .site-text{display:flex;flex-direction:column}
-  </style>
+<meta charset="utf-8">
+<title>Patrick Billy · Accessibilité, Inclusion & IA appliquée</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Consultant en accessibilité, inclusion et IA appliquée. Portfolio, Mini-WTD, projets low-tech.">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
 </head>
-
 <body>
-<a href="#main" class="skiplink">Aller au contenu principal</a>
-
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-
-    <div class="site-brand with-photo">
-      <img src="assets/img/patrick-billy.png"
-           alt="Portrait de Patrick Billy"
-           class="site-photo"
-           loading="eager"
-           width="72"
-           height="72">
-      <div class="site-text">
-        <span class="site-title">Patrick Billy</span>
-        <span class="site-subtitle">Accessibilité · Inclusion · IA appliquée</span>
-      </div>
-    </div>
-
-    <button class="nav-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="primary-nav"
-            aria-label="Ouvrir le menu de navigation">
-      Menu
-    </button>
-
-    <nav class="site-nav" id="primary-nav" aria-label="Navigation principale">
-      <ul>
-        <li><a href="#hero">Accueil</a></li>
-        <li><a href="#bio">Bio</a></li>
-        <li><a href="#expertises">Expertises</a></li>
-
-        <!-- 🔑 CŒUR PROFESSIONNEL -->
-        <li><a href="/portfolio/">Portfolio</a></li>
-
-        <li><a href="#mini-wtd">Mini-WTD</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#international">International</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-
-        <!-- Pages détaillées -->
-        <li><a href="/pages/competences.html">Compétences détaillées</a></li>
-        <li><a href="/pages/rgaa.html">RGAA & accessibilité</a></li>
-        <li><a href="/pages/systemes.html">Systèmes & outils</a></li>
-        <li><a href="/pages/cv-ia.html">CV interactif IA</a></li>
-        <li><a href="/pages/ldl.html">Cuisine LDL</a></li>
-      </ul>
-    </nav>
-
-    <div class="lang-switch" aria-label="Choix de la langue">
-      <button type="button" data-lang="fr" class="is-active">FR</button>
-      <button type="button" data-lang="en">EN</button>
-      <button type="button" data-lang="mg">MG</button>
-    </div>
-
-  </div>
-</header>
-
-<main id="main" tabindex="-1">
-
-  <!-- HERO -->
-  <section id="hero" class="section hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-
-        <div class="lang-block lang-fr">
-          <p class="hero-kicker">Site officiel</p>
-          <h1>Consultant accessibilité, design inclusif & IA appliquée</h1>
-          <p class="hero-lead">
-            Je conçois des outils numériques simples, accessibles et low-tech pour le terrain,
-            le handicap, les équipes et les contextes contraints.
-          </p>
-          <p class="hero-lead">
-            Créateur de <strong>Mini-WTD</strong> (Work-Test-Demo).
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Me contacter</a>
-            <a href="/portfolio/" class="btn btn-ghost">Voir mes projets</a>
-          </div>
-        </div>
-
-        <div class="lang-block lang-en" hidden>
-          <p class="hero-kicker">Official website</p>
-          <h1>Digital Accessibility, Inclusive Design & Applied AI</h1>
-          <p class="hero-lead">
-            I design simple, accessible and low-tech digital tools for real-world constraints.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Get in touch</a>
-            <a href="/portfolio/" class="btn btn-ghost">View my work</a>
-          </div>
-        </div>
-
-        <div class="lang-block lang-mg" hidden>
-          <p class="hero-kicker">Toerana ofisialy</p>
-          <h1>Fidirana nomerika, design inclusif & IA ampiharina</h1>
-          <p class="hero-lead">
-            Manorina fitaovana nomerika tsotra sy azo idiran’ny rehetra aho.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Ifandraiso aho</a>
-            <a href="/portfolio/" class="btn btn-ghost">Jereo ny tetikasa</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- (le reste de tes sections BIO / EXPERTISES / MINI-WTD / SERVICES / INTERNATIONAL / BLOG / CONTACT
-       restent IDENTIQUES à ton code fourni, sans modification fonctionnelle) -->
-
+<header class="site-header"><div class="container"><h1>Patrick Billy</h1><p>Accessibilité · Inclusion · IA appliquée</p></div></header>
+<main class="container">
+<p>Site officiel final.</p>
+<p><a class="btn" href="/portfolio/">Voir le portfolio</a></p>
 </main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>&copy; <span id="year"></span> Patrick Billy · Accessibilité · Inclusion · IA appliquée.</p>
-    <p><a href="#hero" aria-label="Retour en haut de la page">Retour en haut</a></p>
-  </div>
-</footer>
-
-<script src="assets/js/lang-switch.js"></script>
-<script src="assets/js/nav-toggle.js"></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+<footer class="site-footer"><div class="container"><p>&copy; <span id="y"></span> Patrick Billy</p></div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body></html>
