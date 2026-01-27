@@ -437,3 +437,33 @@
     white-space:normal;
   }
 }
+
+/* MENU MOBILE ACCESSIBLE */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0.75rem 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* MENU DESKTOP */
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav li {
+    margin: 0;
+  }
+}
