@@ -71,3 +71,15 @@
   border-bottom:1px dashed color-mix(in srgb, var(--border) 80%, #fff 20%);
 }
 .list-clean li:last-child{ border-bottom:none; }
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.lang-switch a[aria-current="true"] {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
