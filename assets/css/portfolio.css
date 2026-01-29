@@ -1,13 +1,25 @@
-/* =========================================================
-   PORTFOLIO — Patrick Billy
-   Objectifs :
-   - Lisible
-   - Robuste
-   - Accessible
-   - Mobile-first
-   ========================================================= */
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --bg: #ffffff;
+  --fg: #0f172a;
+  --muted: #475569;
+  --border: #e5e7eb;
 
-/* ---------- RESET MINIMAL ---------- */
+  --primary: #1d4ed8;
+  --primary-contrast: #ffffff;
+
+  --radius: 0.5rem;
+  --max-width: 72rem;
+
+  --font-base: 1rem;
+  --line-height: 1.6;
+}
+
+/* =========================
+   RESET MINIMAL
+========================= */
 *,
 *::before,
 *::after {
@@ -21,155 +33,171 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.6;
-  color: #111;
-  background: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--font-base);
+  line-height: var(--line-height);
+  color: var(--fg);
+  background: var(--bg);
 }
 
-/* ---------- ACCESSIBILITÉ ---------- */
+/* =========================
+   ACCESSIBILITÉ
+========================= */
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  z-index: 1000;
+  left: -9999px;
+  top: auto;
 }
 
 .skip-link:focus {
-  top: 0;
+  left: 1rem;
+  top: 1rem;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  z-index: 1000;
 }
 
 a {
-  color: #0b4a6f;
+  color: var(--primary);
   text-decoration: underline;
 }
 
 a:focus-visible {
-  outline: 3px solid #0b4a6f;
-  outline-offset: 3px;
+  outline: 3px solid #000;
+  outline-offset: 2px;
 }
 
-/* ---------- LAYOUT ---------- */
+/* =========================
+   STRUCTURE
+========================= */
 .container {
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin-inline: auto;
   padding: 1rem;
 }
 
-.section-tight {
-  padding: 3rem 0;
-}
-
-/* ---------- HEADER ---------- */
-.site-header {
-  border-bottom: 1px solid #ddd;
+header.site-header {
+  border-bottom: 1px solid var(--border);
   background: #fafafa;
 }
 
 .header-inner {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .brand a {
   font-weight: 700;
+  font-size: 1.1rem;
   text-decoration: none;
-  color: #111;
+  color: var(--fg);
 }
 
 .brand small {
   display: block;
   font-size: 0.85rem;
-  color: #555;
+  color: var(--muted);
 }
 
-/* ---------- NAV ---------- */
+/* =========================
+   NAVIGATION
+========================= */
 .nav ul {
   list-style: none;
+  display: flex;
+  gap: 0.75rem;
   padding: 0;
   margin: 0;
-  display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
 }
 
 .nav a {
   text-decoration: none;
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
 }
 
 .nav a[aria-current="page"] {
-  font-weight: 700;
-  background: #e6f0f6;
+  background: var(--primary);
+  color: var(--primary-contrast);
 }
 
-/* ---------- HERO ---------- */
-.hero {
-  background: #f4f6f8;
-  padding: 4rem 0;
+/* =========================
+   TYPOGRAPHIE
+========================= */
+h1, h2, h3 {
+  line-height: 1.3;
 }
 
-.kicker {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #555;
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
 
-.hero h1 {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  line-height: 1.25;
+h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
-.lead {
-  max-width: 60ch;
+h3 {
+  font-size: 1.1rem;
 }
 
-/* ---------- BOUTONS ---------- */
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+p {
+  max-width: 65ch;
 }
 
+.muted {
+  color: var(--muted);
+}
+
+/* =========================
+   BOUTONS
+========================= */
 .btn {
   display: inline-block;
-  padding: 0.55rem 1rem;
-  border-radius: 4px;
-  border: 2px solid transparent;
-  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
   text-decoration: none;
+  font-weight: 600;
+  min-height: 44px; /* accessibilité tactile */
 }
 
 .btn-primary {
-  background: #0b4a6f;
-  color: #fff;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-  background: #083652;
+  background: var(--primary);
+  color: var(--primary-contrast);
 }
 
 .btn-outline {
-  border-color: #0b4a6f;
-  color: #0b4a6f;
+  border: 2px solid var(--primary);
+  color: var(--primary);
   background: transparent;
 }
 
-.btn-outline:hover,
-.btn-outline:focus {
-  background: #e6f0f6;
+/* =========================
+   SECTIONS
+========================= */
+.hero {
+  padding: 2.5rem 0;
 }
 
-/* ---------- GRILLES ---------- */
+.kicker {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.section-tight {
+  padding: 2rem 0;
+}
+
+/* =========================
+   CARTES & GRILLES
+========================= */
 .grid {
   display: grid;
   gap: 1.5rem;
@@ -183,76 +211,38 @@ a:focus-visible {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* ---------- CARTES ---------- */
 .card {
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   background: #fff;
 }
 
 .card-inner {
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
-.card h3 {
-  margin-top: 0;
-}
-
-.muted {
-  color: #555;
-}
-
-.meta {
-  margin-top: 0.75rem;
-}
-
-.badge {
-  display: inline-block;
-  background: #eef2f5;
-  color: #333;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  font-size: 0.75rem;
-  margin-right: 0.25rem;
-}
-
-/* ---------- HR ---------- */
-.hr {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 3rem 0;
-}
-
-/* ---------- CALLOUT ---------- */
+/* =========================
+   CALLOUT
+========================= */
 .callout {
-  border-left: 6px solid #0b4a6f;
-  background: #f4f6f8;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
   padding: 1.5rem;
+  background: #f8fafc;
 }
 
-/* ---------- FOOTER ---------- */
-.footer {
-  border-top: 1px solid #ddd;
-  margin-top: 4rem;
-  background: #fafafa;
+/* =========================
+   FOOTER
+========================= */
+footer.footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
 }
 
-.footer p {
-  margin: 0.5rem 0;
+footer p {
+  font-size: 0.9rem;
 }
 
-.footer .small {
+.small {
   font-size: 0.85rem;
-  color: #555;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (min-width: 768px) {
-  .header-inner {
-    justify-content: space-between;
-  }
-
-  .hero {
-    padding: 5rem 0;
-  }
 }
