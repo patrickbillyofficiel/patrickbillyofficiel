@@ -2,78 +2,115 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Contact · Portfolio Patrick Billy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact : email, LinkedIn, informations utiles pour cadrer une mission accessibilité, inclusion, IA appliquée, low-tech/offline.">
 
-  <link rel="stylesheet" href="assets/css/portfolio.css">
+  <title>Contact · Portfolio Patrick Billy</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Contact Patrick Billy : email, LinkedIn et informations utiles pour cadrer une mission en accessibilité, inclusion, IA appliquée et low-tech/offline.">
+
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
 </head>
 
 <body>
-  <a href="#main" class="skiplink">Aller au contenu principal</a>
 
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <div class="brand">
-        <a href="index.html" aria-label="Accueil du portfolio">Patrick Billy — Portfolio</a>
-        <small>Contact</small>
-      </div>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
 
-      <nav class="nav" aria-label="Navigation principale">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="projets.html">Projets</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
-          <li><a aria-current="page" class="btn btn-primary" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <div class="brand">
+      <a href="index.html">Patrick Billy — Portfolio</a>
+      <small>Contact</small>
     </div>
-  </header>
 
-  <main id="main" class="section" tabindex="-1">
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li>
+          <a class="btn btn-primary" aria-current="page" href="contact.html">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- TITRE -->
+  <section class="section-tight">
     <div class="container">
       <h1>Contact</h1>
-      <p class="muted">Pour aller vite : dis-moi ton public, tes contraintes, et ce que tu veux améliorer.</p>
+      <p class="muted">
+        Pour aller vite : dis-moi ton public, tes contraintes,
+        et ce que tu veux améliorer.
+      </p>
+    </div>
+  </section>
 
+  <!-- COORDONNEES / CADRAGE -->
+  <section class="section-tight">
+    <div class="container">
       <div class="grid grid-2">
-        <section class="card" aria-labelledby="coord-title">
+
+        <article class="card">
           <div class="card-inner">
-            <h2 class="h3" id="coord-title">Coordonnées</h2>
+            <h2>Coordonnées</h2>
             <ul>
-              <li>Email : <a href="mailto:elanpourtous49@gmail.com">elanpourtous49@gmail.com</a></li>
+              <li>
+                Email :
+                <a href="mailto:elanpourtous49@gmail.com">
+                  elanpourtous49@gmail.com
+                </a>
+              </li>
               <li>
                 LinkedIn :
                 <a href="https://www.linkedin.com/in/patrickbilly"
                    target="_blank"
-                   rel="noopener noreferrer">/in/patrickbilly</a>
+                   rel="noopener noreferrer">
+                  linkedin.com/in/patrickbilly
+                </a>
               </li>
             </ul>
-            <p class="note small">Je réponds mieux aux demandes qui décrivent le contexte. Sinon, je devine… et je déteste deviner.</p>
+            <p class="small muted">
+              Je réponds mieux aux demandes qui décrivent le contexte.
+              Sinon, je devine… et je déteste deviner.
+            </p>
           </div>
-        </section>
+        </article>
 
-        <section class="card" aria-labelledby="cadrage-title">
+        <article class="card">
           <div class="card-inner">
-            <h2 class="h3" id="cadrage-title">Pour cadrer ta demande</h2>
+            <h2>Pour cadrer ta demande</h2>
             <ul>
               <li><strong>Public</strong> (qui utilise ?)</li>
-              <li><strong>Contexte</strong> (terrain / bureau / formation / RH…)</li>
-              <li><strong>Contraintes</strong> (offline, matériel, délai, accessibilité…)</li>
-              <li><strong>Objectif</strong> (réduire erreurs, rendre accessible, simplifier…)</li>
+              <li><strong>Contexte</strong> (terrain, bureau, formation, RH…)</li>
+              <li><strong>Contraintes</strong> (offline, matériel, délais, accessibilité…)</li>
+              <li><strong>Objectif</strong> (simplifier, rendre accessible, réduire erreurs…)</li>
               <li><strong>Deadline</strong> (si tu en as une)</li>
             </ul>
           </div>
-        </section>
+        </article>
+
       </div>
+    </div>
+  </section>
 
-      <hr class="hr" aria-hidden="true">
+  <hr class="hr" aria-hidden="true">
 
-      <section class="callout" aria-labelledby="msg-title">
+  <!-- MESSAGE TYPE -->
+  <section class="section-tight">
+    <div class="container">
+      <article class="callout">
         <h2 id="msg-title">Message type (copier-coller)</h2>
 
         <p class="muted" id="template-text">
-          Bonjour Patrick, je cherche [audit/corrections/module offline/assistant IA] pour [contexte].
+          Bonjour Patrick, je cherche [audit / corrections / module offline / assistant IA]
+          pour [contexte].
           Public : […]. Contraintes : […]. Deadline : […]. Liens / accès : […].
         </p>
 
@@ -83,44 +120,61 @@
             Envoyer un email
           </a>
 
-          <button class="btn btn-outline" type="button" id="copy-btn" aria-describedby="copy-status">
+          <button class="btn btn-outline"
+                  type="button"
+                  id="copy-btn"
+                  aria-describedby="copy-status">
             Copier le message
           </button>
 
-          <a class="btn btn-outline" href="projets.html">Voir des exemples</a>
+          <a class="btn btn-outline" href="projets.html">
+            Voir des exemples
+          </a>
         </div>
 
-        <p id="copy-status" class="note small" aria-live="polite" style="margin-top:10px;"></p>
-      </section>
+        <p id="copy-status"
+           class="small muted"
+           aria-live="polite"></p>
+      </article>
+    </div>
+  </section>
 
-      <div class="actions" style="margin-top:24px;">
-        <a class="btn btn-outline" href="../index.html">Retour au site officiel</a>
+  <!-- RETOUR -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="actions">
+        <a class="btn btn-outline" href="../index.html">
+          Retour au site officiel
+        </a>
       </div>
     </div>
-  </main>
+  </section>
 
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <p>© <span id="year"></span> Patrick Billy — Portfolio.</p>
-      <p><a href="#main">Retour en haut</a></p>
-    </div>
-  </footer>
+</main>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <p>© <span id="year"></span> Patrick Billy — Portfolio</p>
+    <p><a href="#main">Retour en haut</a></p>
+  </div>
+</footer>
 
-    const btn = document.getElementById('copy-btn');
-    const text = document.getElementById('template-text');
-    const status = document.getElementById('copy-status');
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    btn.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(text.textContent.trim());
-        status.textContent = "Copié. Tu peux coller ça direct dans ton mail.";
-      } catch (e) {
-        status.textContent = "Copie impossible ici (navigateur). Sélectionne le texte et fais Ctrl+C.";
-      }
-    });
-  </script>
+  const btn = document.getElementById('copy-btn');
+  const text = document.getElementById('template-text');
+  const status = document.getElementById('copy-status');
+
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(text.textContent.trim());
+      status.textContent = "Message copié. Tu peux le coller directement dans ton mail.";
+    } catch (e) {
+      status.textContent = "Copie impossible ici. Sélectionne le texte et fais Ctrl+C.";
+    }
+  });
+</script>
+
 </body>
 </html>
