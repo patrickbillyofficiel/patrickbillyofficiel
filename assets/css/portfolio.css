@@ -1,204 +1,258 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
+/* =========================================================
+   PORTFOLIO — Patrick Billy
+   Objectifs :
+   - Lisible
+   - Robuste
+   - Accessible
+   - Mobile-first
+   ========================================================= */
 
-  <title>Portfolio · Patrick Billy</title>
+/* ---------- RESET MINIMAL ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Portfolio de Patrick Billy : accessibilité numérique, design inclusif, IA appliquée, solutions low-tech et offline. Projets concrets, utilisables sur le terrain.">
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/portfolio.css">
-</head>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #111;
+  background: #ffffff;
+}
 
-<body>
+/* ---------- ACCESSIBILITÉ ---------- */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
 
-<a href="#main" class="skip-link">Aller au contenu principal</a>
+.skip-link:focus {
+  top: 0;
+}
 
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-    <div class="brand">
-      <a href="/portfolio/index.html" aria-current="page">
-        Patrick Billy — Portfolio
-      </a>
-      <small>Accessibilité · Inclusion · IA appliquée · Low-tech</small>
-    </div>
+a {
+  color: #0b4a6f;
+  text-decoration: underline;
+}
 
-    <nav class="nav" aria-label="Navigation principale">
-      <ul>
-        <li><a href="/portfolio/index.html" aria-current="page">Accueil</a></li>
-        <li><a href="/portfolio/projets.html">Projets</a></li>
-        <li><a href="/portfolio/services.html">Services</a></li>
-        <li><a href="/portfolio/a-propos.html">À propos</a></li>
-        <li>
-          <a class="btn btn-primary" href="/portfolio/contact.html">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+a:focus-visible {
+  outline: 3px solid #0b4a6f;
+  outline-offset: 3px;
+}
 
-<main id="main" tabindex="-1">
+/* ---------- LAYOUT ---------- */
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 1rem;
+}
 
-  <!-- HERO -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container">
-      <p class="kicker">Portfolio — démonstrateurs concrets</p>
+.section-tight {
+  padding: 3rem 0;
+}
 
-      <h1 id="hero-title">
-        Outils simples, robustes, accessibles — pensés pour le terrain
-      </h1>
+/* ---------- HEADER ---------- */
+.site-header {
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+}
 
-      <p class="lead">
-        Je travaille avec des contraintes réelles : handicap, usage en conditions imparfaites,
-        équipes pressées, infrastructures limitées.
-        Je fais du numérique qui sert, pas du numérique qui brille.
-      </p>
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
 
-      <div class="actions">
-        <a class="btn btn-primary" href="/portfolio/projets.html">
-          Voir les projets
-        </a>
-        <a class="btn btn-outline" href="/portfolio/contact.html">
-          Me contacter
-        </a>
-      </div>
-    </div>
-  </section>
+.brand a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #111;
+}
 
-  <!-- PREUVES -->
-  <section class="section-tight" aria-labelledby="proofs-title">
-    <div class="container">
-      <h2 id="proofs-title">3 preuves rapides</h2>
+.brand small {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+}
 
-      <div class="grid grid-3">
+/* ---------- NAV ---------- */
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
 
-        <article class="card">
-          <div class="card-inner">
-            <h3>Accessibilité (RGAA / WCAG)</h3>
-            <p class="muted">
-              Audit, corrections, re-tests, lecteur d’écran, clavier.
-              On vise le réel, pas le PDF décoratif.
-            </p>
-            <div class="meta" aria-label="Mots-clés">
-              <span class="badge">Audit</span>
-              <span class="badge">Backlog</span>
-              <span class="badge">Re-test</span>
-            </div>
-          </div>
-        </article>
+.nav a {
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
 
-        <article class="card">
-          <div class="card-inner">
-            <h3>Low-tech &amp; offline</h3>
-            <p class="muted">
-              Modules web utilisables sans réseau :
-              clé USB, intranet, environnements contraints.
-            </p>
-            <div class="meta" aria-label="Mots-clés">
-              <span class="badge">Robuste</span>
-              <span class="badge">Simple</span>
-              <span class="badge">Maintenable</span>
-            </div>
-          </div>
-        </article>
+.nav a[aria-current="page"] {
+  font-weight: 700;
+  background: #e6f0f6;
+}
 
-        <article class="card">
-          <div class="card-inner">
-            <h3>IA appliquée (utile)</h3>
-            <p class="muted">
-              Assistants pédagogiques pour expliquer, guider, rassurer.
-              Pas de “wahou”, du concret.
-            </p>
-            <div class="meta" aria-label="Mots-clés">
-              <span class="badge">Pédagogie</span>
-              <span class="badge">Guidance</span>
-              <span class="badge">Garde-fous</span>
-            </div>
-          </div>
-        </article>
+/* ---------- HERO ---------- */
+.hero {
+  background: #f4f6f8;
+  padding: 4rem 0;
+}
 
-      </div>
+.kicker {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+}
 
-      <hr class="hr" aria-hidden="true">
-    </div>
-  </section>
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.25;
+}
 
-  <!-- PROJETS VEDETTES -->
-  <section class="section-tight" aria-labelledby="featured-title">
-    <div class="container">
-      <h2 id="featured-title">Projets en vedette</h2>
+.lead {
+  max-width: 60ch;
+}
 
-      <div class="grid grid-2">
+/* ---------- BOUTONS ---------- */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
 
-        <article class="card project-card">
-          <div class="card-inner">
-            <h3>Mini-WTD</h3>
-            <p>Simulation de poste et pistes d’aménagement, centrées personne.</p>
-            <p class="more">
-              <a class="btn btn-outline" href="/portfolio/projets/mini-wtd.html">
-                Voir le projet →
-              </a>
-            </p>
-          </div>
-        </article>
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  font-weight: 600;
+  text-decoration: none;
+}
 
-        <article class="card project-card">
-          <div class="card-inner">
-            <h3>Assistant IA (RH / formation)</h3>
-            <p>Un assistant qui reformule, explique et guide — sans noyer.</p>
-            <p class="more">
-              <a class="btn btn-outline" href="/portfolio/projets/assistant-ia.html">
-                Voir le projet →
-              </a>
-            </p>
-          </div>
-        </article>
+.btn-primary {
+  background: #0b4a6f;
+  color: #fff;
+}
 
-      </div>
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #083652;
+}
 
-      <hr class="hr" aria-hidden="true">
-    </div>
-  </section>
+.btn-outline {
+  border-color: #0b4a6f;
+  color: #0b4a6f;
+  background: transparent;
+}
 
-  <!-- CTA -->
-  <section class="section-tight" aria-labelledby="cta-title">
-    <div class="container">
-      <div class="callout">
-        <h2 id="cta-title">Tu veux un outil qui marche vraiment ?</h2>
-        <p class="muted">
-          Donne-moi ton contexte, tes contraintes, ton public.
-          Je te réponds avec du concret.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="/portfolio/contact.html">
-            Me contacter
-          </a>
-          <a class="btn btn-outline" href="/">
-            Retour au site officiel
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+.btn-outline:hover,
+.btn-outline:focus {
+  background: #e6f0f6;
+}
 
-</main>
+/* ---------- GRILLES ---------- */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
 
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <p>© <span id="year"></span> Patrick Billy — Portfolio</p>
-    <p class="small">Si ça ne marche pas au clavier, ça ne marche pas.</p>
-    <p><a href="#main">Retour en haut</a></p>
-  </div>
-</footer>
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
 
-</body>
-</html>
+/* ---------- CARTES ---------- */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.card-inner {
+  padding: 1.25rem;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.muted {
+  color: #555;
+}
+
+.meta {
+  margin-top: 0.75rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #eef2f5;
+  color: #333;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+/* ---------- HR ---------- */
+.hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 3rem 0;
+}
+
+/* ---------- CALLOUT ---------- */
+.callout {
+  border-left: 6px solid #0b4a6f;
+  background: #f4f6f8;
+  padding: 1.5rem;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  border-top: 1px solid #ddd;
+  margin-top: 4rem;
+  background: #fafafa;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.footer .small {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (min-width: 768px) {
+  .header-inner {
+    justify-content: space-between;
+  }
+
+  .hero {
+    padding: 5rem 0;
+  }
+}
