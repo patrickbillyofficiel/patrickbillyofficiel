@@ -1,26 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>Mini-WTD – Work Test Démo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../assets/css/base.css">
-<link rel="stylesheet" href="../../assets/css/layout.css">
-<link rel="stylesheet" href="../../assets/css/components.css">
+  <meta charset="utf-8">
+  <title>Mini-WTD · Projet · Portfolio Patrick Billy</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Mini-WTD : module de simulation de poste, analyse des contraintes et pistes d’aménagement, utilisable offline et centré sur la personne.">
+
+  <link rel="stylesheet" href="../../assets/css/portfolio.css">
 </head>
 
 <body>
-<main id="main">
-<h1>Mini-WTD</h1>
 
-<p>
-Mini-WTD est un démonstrateur d’évaluation de l’accessibilité réelle
-dans les situations de travail.
-</p>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
 
-<p>
-Il permet de tester, observer et adapter sans exclure.
-</p>
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <div class="brand">
+      <a href="../index.html">Patrick Billy — Portfolio</a>
+      <small>Projet : Mini-WTD</small>
+    </div>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../projets.html" aria-current="page">Projets</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../a-propos.html">À propos</a></li>
+        <li><a class="btn btn-primary" href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- TITRE -->
+  <section class="section-tight">
+    <div class="container">
+      <h1>Mini-WTD</h1>
+
+      <p class="muted">
+        Module de simulation de poste et d’analyse de situations de travail,
+        conçu pour être utilisable par des personnes réelles,
+        dans des contextes réels.
+      </p>
+
+      <div class="meta" aria-label="Caractéristiques du projet">
+        <span class="badge">Low-tech</span>
+        <span class="badge">Offline</span>
+        <span class="badge">Inclusion</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEXTE -->
+  <section class="section-tight">
+    <div class="container">
+      <article class="card">
+        <div class="card-inner">
+          <h2>Contexte</h2>
+          <p class="muted">
+            Décrire une situation de travail réelle et produire des pistes
+            d’aménagement concrètes, sans perdre les personnes
+            dans des formulaires complexes ou abstraits.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- OBJECTIFS / CONTRIBUTION -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="grid grid-2">
+
+        <article class="card">
+          <div class="card-inner">
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Décrire tâches et contraintes (motrices, cognitives, sensorielles).</li>
+              <li>Proposer des pistes réalistes d’adaptation.</li>
+              <li>Fonctionner sans réseau (clé USB / intranet).</li>
+              <li>Interface simple, accessible, utilisable par des profils variés.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-inner">
+            <h2>Ce que j’ai fait</h2>
+            <ol>
+              <li>Conception du parcours minimal et des écrans.</li>
+              <li>Rédaction des micro-textes (clarifier, rassurer, guider).</li>
+              <li>Prototype offline (HTML / CSS / JS) + packaging.</li>
+              <li>Contrôles accessibilité : clavier, focus, sémantique.</li>
+            </ol>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTATS -->
+  <section class="section-tight">
+    <div class="container">
+      <article class="card">
+        <div class="card-inner">
+          <h2>Résultats</h2>
+          <ul>
+            <li>Compréhension plus rapide de la situation de travail.</li>
+            <li>Moins d’allers-retours pour traduire le besoin.</li>
+            <li>Support plus clair pour décider d’aménagements concrets.</li>
+          </ul>
+          <p class="small muted">
+            Quand l’outil est simple, les gens parlent enfin du vrai problème.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ACCESSIBILITE -->
+  <section class="section-tight">
+    <div class="container">
+      <article class="card">
+        <div class="card-inner">
+          <h2>Accessibilité & robustesse</h2>
+          <ul>
+            <li>Navigation clavier complète avec focus visible.</li>
+            <li>HTML sémantique : titres, listes, hiérarchie claire.</li>
+            <li>Aucune dépendance réseau (offline réel).</li>
+            <li>Maintenance facilitée par une structure simple.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- DEBAT / ECHANGES -->
+  <section class="section-tight" aria-labelledby="debats-title">
+    <div class="container">
+      <h2 id="debats-title">Échanges & retours</h2>
+
+      <p class="muted">
+        Cet espace permet de poser des questions, partager des retours
+        ou discuter des choix techniques et humains du projet.
+        Un compte GitHub est nécessaire pour participer.
+      </p>
+
+      <!-- GISCUS : colle ici TON script généré avec repo-id et category-id -->
+      <!--
+      <script src="https://giscus.app/client.js"
+        data-repo="patrickbillyofficiel/patrickbillyofficiel.github.io"
+        data-repo-id="XXXX"
+        data-category="Débats"
+        data-category-id="YYYY"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="fr"
+        crossorigin="anonymous"
+        async>
+      </script>
+      -->
+    </div>
+  </section>
+
+  <!-- ACTIONS -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="actions">
+        <a class="btn btn-outline" href="../projets.html">← Retour aux projets</a>
+        <a class="btn btn-primary" href="../contact.html">Me contacter</a>
+      </div>
+    </div>
+  </section>
+
 </main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <p>© <span id="year"></span> Patrick Billy — Portfolio</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
