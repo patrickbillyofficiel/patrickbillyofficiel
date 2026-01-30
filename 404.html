@@ -2,96 +2,150 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-
   <title>Page introuvable · Patrick Billy</title>
-
+  <meta name="description" content="Page introuvable. Retour vers le site de Patrick Billy : accessibilité, inclusion, IA responsable et portfolio.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
 
-  <meta name="description"
-        content="Cette page n’existe pas ou plus. Accédez aux contenus principaux du site Patrick Billy : accessibilité vécue, inclusion et outils concrets.">
-
-  <!-- CSS global -->
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
+
+  <style>
+    .nf-wrap{max-width:860px;margin:0 auto;padding:2rem 1rem}
+    .nf-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.25rem}
+    .nf-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+    .nf-actions a{display:inline-block}
+    .nf-small{opacity:.85}
+    .nf-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+  </style>
 </head>
 
 <body>
+<a class="skip-link" href="#main">Aller au contenu principal</a>
 
-<a href="#main" class="skip-link">Aller au contenu principal</a>
-
-<header role="banner" class="site-header">
-  <nav aria-label="Navigation principale">
-    <ul class="nav-list">
-      <li><a href="/">Accueil</a></li>
-      <li><a href="/lang/fr/index.html">Site principal</a></li>
+<header class="site-header" role="banner">
+  <nav class="nav-global" aria-label="Navigation principale">
+    <ul>
+      <li><a href="/lang/fr/index.html">Accueil</a></li>
       <li><a href="/portfolio/index.html">Portfolio</a></li>
       <li><a href="/lang/fr/contact.html">Contact</a></li>
+    </ul>
+    <ul class="nav-lang" aria-label="Choix de la langue">
+      <li><a href="/lang/fr/index.html">FR</a></li>
+      <li><a href="/lang/en/index.html">EN</a></li>
+      <li><a href="/lang/es/index.html">ES</a></li>
+      <li><a href="/lang/mg/index.html">MG</a></li>
     </ul>
   </nav>
 </header>
 
-<main id="main" tabindex="-1">
+<main id="main" class="nf-wrap">
+  <div class="nf-card">
 
-  <section aria-labelledby="titre-404">
-    <h1 id="titre-404">Page introuvable</h1>
+    <!-- FR -->
+    <section class="lang-block" data-lang="fr">
+      <h1>Page introuvable (404)</h1>
+      <p class="nf-small">
+        Le lien est peut-être cassé, ou la page a été déplacée.
+      </p>
+      <p class="nf-small">
+        URL demandée : <span class="nf-code" id="req-url-fr"></span>
+      </p>
 
-    <p class="subtitle">
-      <strong>Ce lien ne mène nulle part.</strong>
-    </p>
+      <div class="nf-actions">
+        <a class="button" href="/lang/fr/index.html">Retour accueil</a>
+        <a class="button" href="/portfolio/index.html">Aller au portfolio</a>
+        <a class="button" href="/lang/fr/contact.html">Me contacter</a>
+      </div>
 
-    <p>
-      La page que vous cherchez n’existe pas,
-      a été déplacée,
-      ou l’adresse contient une erreur.
-    </p>
+      <p class="nf-small" style="margin-top:1rem">
+        Raccourcis : <a href="/lang/fr/bio.html">Bio</a> · <a href="/lang/fr/competences.html">Compétences</a>
+      </p>
+    </section>
 
-    <p>
-      Ce genre de situation arrive souvent
-      quand un site évolue — et c’est normal.
-    </p>
-  </section>
+    <!-- EN -->
+    <section class="lang-block" data-lang="en" hidden>
+      <h1>Page not found (404)</h1>
+      <p class="nf-small">
+        The link may be broken, or the page has moved.
+      </p>
+      <p class="nf-small">
+        Requested URL: <span class="nf-code" id="req-url-en"></span>
+      </p>
 
-  <section aria-labelledby="solutions">
-    <h2 id="solutions">Que pouvez-vous faire ?</h2>
+      <div class="nf-actions">
+        <a class="button" href="/lang/en/index.html">Go to home</a>
+        <a class="button" href="/portfolio/index.html">Open portfolio</a>
+        <a class="button" href="/lang/en/contact.html">Contact</a>
+      </div>
 
-    <ul>
-      <li>Revenir à l’accueil du site</li>
-      <li>Accéder au portfolio des projets</li>
-      <li>Passer par la page contact</li>
-      <li>Changer de langue si besoin</li>
-    </ul>
-  </section>
+      <p class="nf-small" style="margin-top:1rem">
+        Shortcuts: <a href="/lang/en/bio.html">Bio</a> · <a href="/lang/en/competences.html">Expertise</a>
+      </p>
+    </section>
 
-  <section aria-labelledby="actions">
-    <h2 id="actions">Accès rapides</h2>
+    <!-- ES -->
+    <section class="lang-block" data-lang="es" hidden>
+      <h1>Página no encontrada (404)</h1>
+      <p class="nf-small">
+        El enlace puede estar roto o la página fue movida.
+      </p>
+      <p class="nf-small">
+        URL solicitada: <span class="nf-code" id="req-url-es"></span>
+      </p>
 
-    <p class="actions">
-      <a href="/" class="button">Accueil</a>
-      <a href="/portfolio/index.html" class="button">Portfolio</a>
-      <a href="/lang/fr/contact.html" class="button">Contact</a>
-    </p>
-  </section>
+      <div class="nf-actions">
+        <a class="button" href="/lang/es/index.html">Ir al inicio</a>
+        <a class="button" href="/portfolio/index.html">Ver portfolio</a>
+        <a class="button" href="/lang/es/contact.html">Contacto</a>
+      </div>
 
-  <section aria-labelledby="lang">
-    <h2 id="lang">Langue</h2>
+      <p class="nf-small" style="margin-top:1rem">
+        Atajos: <a href="/lang/es/bio.html">Bio</a> · <a href="/lang/es/competences.html">Competencias</a>
+      </p>
+    </section>
 
-    <nav aria-label="Sélecteur de langue">
-      <ul class="lang-switch">
-        <li><a href="/404.html" aria-current="true">FR</a></li>
-        <li><a href="/lang/en/404.html">EN</a></li>
-        <li><a href="/lang/es/404.html">ES</a></li>
-        <li><a href="/lang/mg/404.html">MG</a></li>
-      </ul>
-    </nav>
-  </section>
+    <!-- MG -->
+    <section class="lang-block" data-lang="mg" hidden>
+      <h1>Tsy hita ny pejy (404)</h1>
+      <p class="nf-small">
+        Mety tapaka ilay rohy, na nafindra ilay pejy.
+      </p>
+      <p class="nf-small">
+        URL nangatahana: <span class="nf-code" id="req-url-mg"></span>
+      </p>
 
+      <div class="nf-actions">
+        <a class="button" href="/lang/mg/index.html">Miverina</a>
+        <a class="button" href="/portfolio/index.html">Portfolio</a>
+        <a class="button" href="/lang/mg/contact.html">Hifandray</a>
+      </div>
+
+      <p class="nf-small" style="margin-top:1rem">
+        Rohy haingana: <a href="/lang/mg/bio.html">Momba ahy</a> · <a href="/lang/mg/competences.html">Fahaiza-manao</a>
+      </p>
+    </section>
+
+  </div>
 </main>
 
-<footer role="contentinfo" class="site-footer">
-  <p>© 2026 Patrick Billy — Accessibilité vécue · Inclusion · Terrain</p>
+<footer role="contentinfo">
+  <p>© 2026 Patrick Billy</p>
 </footer>
+
+<script>
+  const url = location.href;
+  document.getElementById('req-url-fr').textContent = url;
+  document.getElementById('req-url-en').textContent = url;
+  document.getElementById('req-url-es').textContent = url;
+  document.getElementById('req-url-mg').textContent = url;
+
+  const lang = (navigator.language || 'fr').toLowerCase();
+  const pick = lang.startsWith('en') ? 'en' : lang.startsWith('es') ? 'es' : (lang.startsWith('mg') ? 'mg' : 'fr');
+  document.querySelectorAll('.lang-block').forEach(s => s.hidden = (s.dataset.lang !== pick));
+  document.documentElement.lang = pick;
+</script>
 
 </body>
 </html>
