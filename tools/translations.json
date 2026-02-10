@@ -1,0 +1,39 @@
+{
+  "fr": {
+    "TITLE": "Accessibilité vécue",
+    "INTRO": "Je conçois des outils numériques utilisables dans des situations réelles.",
+    "BODY": "Fatigue, handicap, matériel ancien, connexion limitée."
+  },
+  "en": {
+    "TITLE": "Lived accessibility",
+    "INTRO": "I design digital tools that work in real-life situations.",
+    "BODY": "Fatigue, disability, old hardware, limited connectivity."
+  },
+  "es": {
+    "TITLE": "Accesibilidad vivida",
+    "INTRO": "Diseño herramientas digitales pensadas para situaciones reales.",
+    "BODY": "Fatiga, discapacidad, hardware antiguo, conectividad limitada."
+  },
+  "de": {
+    "TITLE": "Gelebte Barrierefreiheit",
+    "INTRO": "Ich entwickle digitale Werkzeuge für reale Nutzungssituationen.",
+    "BODY": "Müdigkeit, Behinderung, alte Geräte, eingeschränkte Verbindung."
+  },
+  "mg": {
+    "TITLE": "Fidirana azo ampiasaina amin’ny tena fiainana",
+    "INTRO": "Mamolavola fitaovana nomerika mifanaraka amin’ny zava-misy.",
+    "BODY": "Havizanana, fahasembanana, fitaovana tranainy, tambajotra voafetra."
+  }
+}
+"2026-03-accessibilite-terrain": {
+  "en": {
+    "title": "Accessibility: field use before compliance",
+    "intro": "Compliance does not guarantee real use.",
+    "react_label": "Respond to this article"
+  },
+  "es": {
+    "title": "Accesibilidad: el terreno antes de la conformidad",
+    "intro": "La conformidad no garantiza el uso real.",
+    "react_label": "Responder a este artículo"
+  }
+}
