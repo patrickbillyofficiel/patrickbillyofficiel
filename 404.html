@@ -1,151 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Page introuvable · Patrick Billy</title>
-  <meta name="description" content="Page introuvable. Retour vers le site de Patrick Billy : accessibilité, inclusion, IA responsable et portfolio.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, follow">
-
-  <link rel="stylesheet" href="/assets/css/base.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
-
-  <style>
-    .nf-wrap{max-width:860px;margin:0 auto;padding:2rem 1rem}
-    .nf-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.25rem}
-    .nf-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
-    .nf-actions a{display:inline-block}
-    .nf-small{opacity:.85}
-    .nf-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
 </head>
-
 <body>
-<a class="skip-link" href="#main">Aller au contenu principal</a>
-
+<a href="#main" class="skip-link">Aller au contenu principal</a>
 <header class="site-header" role="banner">
-  <nav class="nav-global" aria-label="Navigation principale">
-    <ul>
-      <li><a href="/lang/fr/index.html">Accueil</a></li>
+  <nav class="nav" aria-label="Navigation principale">
+    <ul class="nav-main">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/bios/bio-fr.html">Bio</a></li>
+      <li><a href="/pages/competences.html">Compétences</a></li>
       <li><a href="/portfolio/index.html">Portfolio</a></li>
-      <li><a href="/lang/fr/contact.html">Contact</a></li>
+      <li><a href="/pages/rgaa.html">RGAA+++++</a></li>
+      <li><a href="/portfolio/contact.html">Contact</a></li>
     </ul>
-    <ul class="nav-lang" aria-label="Choix de la langue">
-      <li><a href="/lang/fr/index.html">FR</a></li>
-      <li><a href="/lang/en/index.html">EN</a></li>
-      <li><a href="/lang/es/index.html">ES</a></li>
-      <li><a href="/lang/mg/index.html">MG</a></li>
+
+    <ul class="nav-lang" aria-label="Langues">
+      <li><a href="/" lang="fr">FR</a></li>
+      <li><a href="/lang/en/index.html" lang="en">EN</a></li>
+      <li><a href="/lang/es/index.html" lang="es">ES</a></li>
+      <li><a href="/lang/de/index.html" lang="de">DE</a></li>
+      <li><a href="/lang/mg/index.html" lang="mg">MG</a></li>
     </ul>
   </nav>
 </header>
-
-<main id="main" class="nf-wrap">
-  <div class="nf-card">
-
-    <!-- FR -->
-    <section class="lang-block" data-lang="fr">
-      <h1>Page introuvable (404)</h1>
-      <p class="nf-small">
-        Le lien est peut-être cassé, ou la page a été déplacée.
-      </p>
-      <p class="nf-small">
-        URL demandée : <span class="nf-code" id="req-url-fr"></span>
-      </p>
-
-      <div class="nf-actions">
-        <a class="button" href="/lang/fr/index.html">Retour accueil</a>
-        <a class="button" href="/portfolio/index.html">Aller au portfolio</a>
-        <a class="button" href="/lang/fr/contact.html">Me contacter</a>
-      </div>
-
-      <p class="nf-small" style="margin-top:1rem">
-        Raccourcis : <a href="/lang/fr/bio.html">Bio</a> · <a href="/lang/fr/competences.html">Compétences</a>
-      </p>
-    </section>
-
-    <!-- EN -->
-    <section class="lang-block" data-lang="en" hidden>
-      <h1>Page not found (404)</h1>
-      <p class="nf-small">
-        The link may be broken, or the page has moved.
-      </p>
-      <p class="nf-small">
-        Requested URL: <span class="nf-code" id="req-url-en"></span>
-      </p>
-
-      <div class="nf-actions">
-        <a class="button" href="/lang/en/index.html">Go to home</a>
-        <a class="button" href="/portfolio/index.html">Open portfolio</a>
-        <a class="button" href="/lang/en/contact.html">Contact</a>
-      </div>
-
-      <p class="nf-small" style="margin-top:1rem">
-        Shortcuts: <a href="/lang/en/bio.html">Bio</a> · <a href="/lang/en/competences.html">Expertise</a>
-      </p>
-    </section>
-
-    <!-- ES -->
-    <section class="lang-block" data-lang="es" hidden>
-      <h1>Página no encontrada (404)</h1>
-      <p class="nf-small">
-        El enlace puede estar roto o la página fue movida.
-      </p>
-      <p class="nf-small">
-        URL solicitada: <span class="nf-code" id="req-url-es"></span>
-      </p>
-
-      <div class="nf-actions">
-        <a class="button" href="/lang/es/index.html">Ir al inicio</a>
-        <a class="button" href="/portfolio/index.html">Ver portfolio</a>
-        <a class="button" href="/lang/es/contact.html">Contacto</a>
-      </div>
-
-      <p class="nf-small" style="margin-top:1rem">
-        Atajos: <a href="/lang/es/bio.html">Bio</a> · <a href="/lang/es/competences.html">Competencias</a>
-      </p>
-    </section>
-
-    <!-- MG -->
-    <section class="lang-block" data-lang="mg" hidden>
-      <h1>Tsy hita ny pejy (404)</h1>
-      <p class="nf-small">
-        Mety tapaka ilay rohy, na nafindra ilay pejy.
-      </p>
-      <p class="nf-small">
-        URL nangatahana: <span class="nf-code" id="req-url-mg"></span>
-      </p>
-
-      <div class="nf-actions">
-        <a class="button" href="/lang/mg/index.html">Miverina</a>
-        <a class="button" href="/portfolio/index.html">Portfolio</a>
-        <a class="button" href="/lang/mg/contact.html">Hifandray</a>
-      </div>
-
-      <p class="nf-small" style="margin-top:1rem">
-        Rohy haingana: <a href="/lang/mg/bio.html">Momba ahy</a> · <a href="/lang/mg/competences.html">Fahaiza-manao</a>
-      </p>
-    </section>
-
-  </div>
+<main id="main">
+  <section>
+    <h1>Page introuvable</h1>
+    <p>La page demandée n’existe pas (ou a été déplacée).</p>
+    <p><a class="button" href="/">Retour à l’accueil</a></p>
+  </section>
 </main>
-
-<footer role="contentinfo">
-  <p>© 2026 Patrick Billy</p>
-</footer>
-
-<script>
-  const url = location.href;
-  document.getElementById('req-url-fr').textContent = url;
-  document.getElementById('req-url-en').textContent = url;
-  document.getElementById('req-url-es').textContent = url;
-  document.getElementById('req-url-mg').textContent = url;
-
-  const lang = (navigator.language || 'fr').toLowerCase();
-  const pick = lang.startsWith('en') ? 'en' : lang.startsWith('es') ? 'es' : (lang.startsWith('mg') ? 'mg' : 'fr');
-  document.querySelectorAll('.lang-block').forEach(s => s.hidden = (s.dataset.lang !== pick));
-  document.documentElement.lang = pick;
-</script>
-
+<footer role="contentinfo"><p>© 2026 Patrick Billy</p></footer>
 </body>
 </html>
