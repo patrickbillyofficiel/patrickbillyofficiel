@@ -1,50 +1,365 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>RGAA+++++ – Accessibilité vécue</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../assets/css/base.css">
-<link rel="stylesheet" href="../assets/css/layout.css">
-<link rel="stylesheet" href="../assets/css/components.css">
+  <meta charset="utf-8">
+  <title>Compétences RGAA · Patrick Billy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Compétences RGAA de Patrick Billy : audits d’accessibilité, adaptation multi-handicap, Accessibilité++ et formation.">
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+
+  <!-- Icons / PWA (optionnel mais propre) -->
+  <link rel="icon" href="../assets/img/pb.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="../assets/img/pb-128.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#0B1220">
 </head>
 
 <body>
-<a href="#main" class="skip-link">Aller au contenu principal</a>
+  <a href="#main" class="skiplink">Aller au contenu principal</a>
 
-<header role="banner">
-<nav aria-label="Navigation principale">
-<ul>
-<li><a href="../index.html">Accueil</a></li>
-<li><a href="bio.html">Bio</a></li>
-<li><a href="competences.html">Expertises</a></li>
-<li><a href="../portfolio/index.html">Portfolio</a></li>
-<li><a href="rgaa.html" aria-current="page">RGAA+++++</a></li>
-<li><a href="../portfolio/contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="site-brand">
+        <span class="site-title">Patrick Billy</span>
+        <span class="site-subtitle">Accessibilité · Inclusion · IA appliquée</span>
+      </div>
 
-<main id="main">
-<h1>RGAA+++++</h1>
+      <!-- ✅ Menu mobile -->
+      <button class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        Menu
+      </button>
 
-<p>
-RGAA+++++ est une extension non normative du RGAA,
-centrée sur l’usage réel, la cognition, la fatigue,
-le stress et les contextes dégradés.
-</p>
+      <!-- ✅ id pour le toggle -->
+      <nav class="site-nav" id="primary-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="../index.html#hero">Accueil</a></li>
+          <li><a href="../index.html#bio">Bio</a></li>
+          <li><a href="../index.html#expertises">Expertises</a></li>
+          <li><a href="../index.html#mini-wtd">Mini-WTD</a></li>
+          <li><a href="../index.html#services">Services</a></li>
 
-<ul>
-<li>Corps humains réels</li>
-<li>Situations réelles</li>
-<li>Low-tech prioritaire</li>
-<li>IA facultative</li>
-<li>Dignité avant conformité</li>
-</ul>
-</main>
+          <li><a href="competences.html">Compétences</a></li>
+          <li><a href="rgaa.html" aria-current="page">RGAA</a></li>
+          <li><a href="systemes.html">Systèmes</a></li>
 
-<footer>
-<p>© Patrick Billy</p>
-</footer>
+          <!-- ⚠️ Garde ce lien seulement si la page existe -->
+          <li><a href="formations.html">Formations</a></li>
+
+          <li><a href="cv-ia.html">CV IA</a></li>
+          <li><a href="blog.html">Blog</a></li>
+
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch" aria-label="Choix de la langue">
+        <button type="button" data-lang="fr" class="is-active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="mg">MG</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="section">
+      <div class="container">
+        <h1>Compétences RGAA &amp; Accessibilité++</h1>
+
+        <!-- FR -->
+        <div class="lang-block lang-fr">
+          <p>
+            Mon travail va du <strong>RGAA strict</strong> à une approche plus large que j’appelle
+            <strong>Accessibilité++</strong> : penser aux vraies personnes, pas seulement aux critères.
+          </p>
+
+          <div class="competence-grid">
+
+            <article class="card competence-card">
+              <h3>
+                Maîtrise du RGAA / WCAG
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Compréhension des critères A/AA/AAA, tests et mise en application.</p>
+              <ul>
+                <li>Lecture et interprétation des critères RGAA.</li>
+                <li>Analyse des impacts sur les vrais usages.</li>
+                <li>Vulgarisation pour équipes non techniques.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Audits d’accessibilité
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Audits techniques + retours terrain.</p>
+              <ul>
+                <li>Structure HTML, titres, liens, formulaires.</li>
+                <li>Navigation clavier, focus, raccourcis.</li>
+                <li>Contrastes, alternatives textuelles, ARIA utile.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Adaptation multi-handicap
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Penser l’interface pour différents profils.</p>
+              <ul>
+                <li>Moteur : interactions simples, boutons larges.</li>
+                <li>Visuel : lecteur vocal, zoom, contrastes nets.</li>
+                <li>Auditif : sous-titres, transcription, notifications visuelles.</li>
+                <li>Cognitif : étapes courtes, langage clair, pictos.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Accessibilité vocale &amp; IA
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Aller plus loin que le RGAA avec la voix et l’IA.</p>
+              <ul>
+                <li>Lecteurs vocaux intégrés à Mini-WTD et modules offline.</li>
+                <li>Transcriptions automatiques pour malentendants.</li>
+                <li>Reformulation IA pour difficultés de compréhension.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Formation RGAA &amp; inclusion
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Former les équipes sans les assommer.</p>
+              <ul>
+                <li>Formations courtes pour directions et comités.</li>
+                <li>Ateliers pratiques pour dev, designers, RH.</li>
+                <li>Cas concrets issus de Mini-WTD et du terrain.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Stratégie d’accessibilité d’entreprise
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Passer d’un site “non conforme” à une trajectoire réaliste.</p>
+              <ul>
+                <li>Feuille de route : priorités, délais, budget.</li>
+                <li>Articulation avec obligations légales.</li>
+                <li>Communication interne et externe.</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- EN -->
+        <div class="lang-block lang-en" hidden>
+          <p>
+            My work ranges from <strong>strict RGAA/WCAG compliance</strong> to a broader approach I call
+            <strong>“Accessibilité++”</strong>: thinking about real people, not only about checklists.
+          </p>
+
+          <div class="competence-grid">
+
+            <article class="card competence-card">
+              <h3>
+                Mastery of RGAA / WCAG
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Understanding A/AA/AAA criteria, testing and practical implementation.</p>
+              <ul>
+                <li>Reading and interpreting RGAA criteria.</li>
+                <li>Analysing impact on real-world usage.</li>
+                <li>Making it understandable for non-technical teams.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Accessibility audits
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Technical audits + field feedback.</p>
+              <ul>
+                <li>HTML structure, headings, links, forms.</li>
+                <li>Keyboard navigation, focus, shortcuts.</li>
+                <li>Contrast, text alternatives, meaningful ARIA.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Multi-disability adaptation
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Designing interfaces for different profiles.</p>
+              <ul>
+                <li>Motor: simple interactions, large targets.</li>
+                <li>Visual: voice reading, zoom, strong contrast.</li>
+                <li>Hearing: captions, transcripts, visual cues.</li>
+                <li>Cognitive: short steps, plain language, icons.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Voice accessibility &amp; AI
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Going beyond RGAA with voice and AI.</p>
+              <ul>
+                <li>Embedded voice readers in Mini-WTD and offline modules.</li>
+                <li>Automatic transcripts for hard-of-hearing users.</li>
+                <li>AI-based reformulation for better understanding.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                RGAA &amp; inclusion training
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Training teams without overwhelming them.</p>
+              <ul>
+                <li>Short sessions for boards and management.</li>
+                <li>Hands-on workshops for dev, design and HR teams.</li>
+                <li>Real-life cases based on Mini-WTD and field work.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Company accessibility strategy
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Moving from “non-compliant site” to a realistic roadmap.</p>
+              <ul>
+                <li>Roadmap: priorities, timelines, budget.</li>
+                <li>Link with legal obligations and reporting.</li>
+                <li>Internal and external communication.</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- MG -->
+        <div class="lang-block lang-mg" hidden>
+          <p>
+            Miasa amin’ny <strong>RGAA madio</strong> aho, fa koa amin’ny fomba lava kokoa antsoiko hoe
+            <strong>“Accessibilité++”</strong> : mieritreritra olona tena misy, fa tsy tabilao fepetra fotsiny.
+          </p>
+
+          <div class="competence-grid">
+
+            <article class="card competence-card">
+              <h3>
+                Fifehezana RGAA / WCAG
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Fahatakarana ny fepetra A/AA/AAA sy ny fampiharana azy.</p>
+              <ul>
+                <li>Famaky sy fandikana ny fepetra RGAA.</li>
+                <li>Fandinihana ny fiantraikany amin’ny fampiasana tena izy.</li>
+                <li>Fanazavana amin’ny teny tsotra ho an’ny ekipa tsy “tech”.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Audit fidirana nomerika
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Audit ara-teknika miaraka amin’ny fijery eny ifotony.</p>
+              <ul>
+                <li>Rafitra HTML, lohateny, rohy, formulaire.</li>
+                <li>Fitetezana amin’ny kitendry, focus, “raccourcis”.</li>
+                <li>Contraste, alt text, ARIA ampiasaina amin’ny saina.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Fampifanarahana ho an’ny fahasembanana maro
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Interface iray fa mety amin’ny profil maro.</p>
+              <ul>
+                <li>Môtôra : bokotra lehibe, hetsika tsotra.</li>
+                <li>Masom-bava : vakiteny amin’ny feo, zoom, contraste mazava.</li>
+                <li>Fandrenesana : dikanteny, soratra amin’ny feo, famantarana hita maso.</li>
+                <li>“Cognitif” : dingana fohy, teny tsotra, kisary manampy.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Fidirana amin’ny feo &amp; IA
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Mandeha lavidavitra kokoa noho ny RGAA amin’ny feo sy IA.</p>
+              <ul>
+                <li>Mpamaky amin’ny feo ao anaty Mini-WTD sy module offline.</li>
+                <li>Dika soratra ho an’ny olona sahirana amin’ny fihainoana.</li>
+                <li>Reformulation amin’ny IA rehefa sarotra takarina ny lahatsoratra.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Fampiofanana RGAA &amp; inclusion
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Fampiofanana ekipa nefa tsy mampitroatra loha.</p>
+              <ul>
+                <li>Fampiofanana fohy ho an’ny fitantanana sy komity.</li>
+                <li>“Atelier pratique” ho an’ny dev, designers, RH.</li>
+                <li>Tranga tena izy nalaina tamin’ny Mini-WTD sy ny zava-misy eny ifotony.</li>
+              </ul>
+            </article>
+
+            <article class="card competence-card">
+              <h3>
+                Paikady fidirana nomerika ho an’ny orinasa
+                <span class="competence-level">★★★★★ Expert</span>
+              </h3>
+              <p>Avy amin’ny tranonkala “tsy mifanaraka” miakatra amin’ny drafitra azo tanterahina.</p>
+              <ul>
+                <li>“Roadmap” : laharam-pahamehana, fe-potoana, teti-bola.</li>
+                <li>Fifandraisana amin’ny adidy ara-dalàna.</li>
+                <li>Fifandraisana anatiny sy ivelany momba ny accessibility.</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Patrick Billy · Accessibilité · Inclusion · IA appliquée.</p>
+      <p><a href="../index.html#hero">Retour à l’accueil</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/lang-switch.js"></script>
+  <script src="../assets/js/nav-toggle.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
