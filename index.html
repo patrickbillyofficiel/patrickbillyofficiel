@@ -7,9 +7,11 @@
         content="Patrick Billy conçoit des systèmes accessibles centrés sur le corps humain réel, les usages concrets et une IA strictement adaptative.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/portfolio.css">
 </head>
 
 <body>
@@ -19,7 +21,10 @@
   <nav class="nav" aria-label="Navigation principale">
     <ul class="nav-main">
       <li><a href="/">Accueil</a></li>
-      <li><a href="/bios/bio-fr.html">Bio</a></li>
+      <!-- Correction du lien vers la page "Bio" (le lien précédent menait à une page 404).
+           La biographie en français est disponible dans le dossier "pages", sous le nom bio.html.
+           Nous utilisons un chemin relatif pour assurer la compatibilité sur GitHub Pages. -->
+      <li><a href="pages/bio.html">Bio</a></li>
       <li><a href="pages/competences.html">Compétences</a></li>
       <li><a href="/portfolio/index.html">Portfolio</a></li>
       <li><a href="pages/rgaa.html">RGAA+++++</a></li>
